@@ -13,15 +13,12 @@ body {
   margin-top: 0px;
   min-height: 900px;
 }
-p {
-  text-align: justify;
-}
 #page {
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: 1em;
-  max-width: 700px;
+  max-width: 750px;
 }
 #header {
   font-size: 26px;
@@ -97,6 +94,11 @@ div#prev-next-links {
 }
 #post {
   border-bottom: 1px solid #ccc;
+}
+#post p {
+/*  line-height: 1.4em; */
+  text-align: justify;
+  margin-bottom: 1.3em;
 }
 #footer a {
     color: #555;
