@@ -1,0 +1,26 @@
+<rss version="2.0">
+  <channel>
+    <title>Derivative Works</title>
+    <link>http://jtdaugherty.github.com</link>
+    <description>A blog about mathematics</description>
+    <language>en-us</language>
+    <managingEditor>drcygnus@gmail.com</managingEditor>
+    <webMaster>drcygnus@gmail.com</webMaster>
+    <item><title>Continuous Functions</title>
+<link>http://jtdaugherty.github.com/posts/continuous-functions.html</link>
+<pubDate>Sat, 18 Feb 2012 19:35:15 UTC</pubDate>
+<guid>http://jtdaugherty.github.com/posts/continuous-functions.html</guid>
+</item>
+<item><title>Proofs in Mathematics</title>
+<link>http://jtdaugherty.github.com/posts/proofs-in-mathematics.html</link>
+<pubDate>Fri, 17 Feb 2012 07:08:33 UTC</pubDate>
+<guid>http://jtdaugherty.github.com/posts/proofs-in-mathematics.html</guid>
+</item>
+<item><title>Introduction</title>
+<link>http://jtdaugherty.github.com/posts/introduction.html</link>
+<pubDate>Fri, 17 Feb 2012 07:08:33 UTC</pubDate>
+<guid>http://jtdaugherty.github.com/posts/introduction.html</guid>
+</item>
+
+  </channel>
+</rss>

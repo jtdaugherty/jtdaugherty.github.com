@@ -1,0 +1,130 @@
+html {
+  background: #003A6E;
+}
+img {
+  border: none;
+}
+body {
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  margin-left: 3em;
+  margin-right: 3em;
+  background: #fff;
+  margin-top: 0px;
+  min-height: 900px;
+}
+p {
+  text-align: justify;
+}
+#page {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 1em;
+  max-width: 700px;
+}
+#header {
+  font-size: 26px;
+}
+h1 {
+  font-size: 32px;
+  font-weight: normal;
+}
+h3 {
+  font-weight: normal;
+}
+#header a {
+  color: #00f;
+  text-decoration: none;
+}
+a#listing {
+  float: right;
+  font-size: 14px;
+  margin-top: 0.25em;
+}
+div#all-posts {
+  margin-top: 1.5em;
+}
+div.listing-entry {
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+span.post-title {
+  font-size: 20px;
+  display: block;
+}
+span.post-title a {
+  text-decoration: none;
+  color: blue;
+}
+span.post-created {
+  font-size: 15px;
+  display: block;
+  margin-left: 1em;
+  color: #555;
+}
+div#prev-next-links {
+  margin-top: 1em;
+}
+.prev-link {
+  color: blue;
+  text-decoration: none;
+}
+.prev-link-subdued {
+  color: #aaa;
+}
+.next-link {
+  float: right;
+  color: blue;
+  text-decoration: none;
+}
+.next-link-subdued {
+  color: #aaa;
+  float: right;
+}
+#footer {
+  border-top: 1px solid #ddd;
+  color: #555;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  font-size: smaller;
+}
+#post h1 {
+  margin-bottom: 0px;
+}
+#post span.post-created {
+  color: #999;
+}
+#post {
+  border-bottom: 1px solid #ccc;
+}
+#footer a {
+    color: #555;
+}
+blockquote {
+    font-style: italic;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+.eq-left {
+    float: left;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+}
+.eq-right {
+    float: right;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+.eq-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.displaymath {
+    display: block;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
