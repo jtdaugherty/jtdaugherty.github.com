@@ -22,16 +22,16 @@ Blog = {
 
 <div id="prev-next-links"><a class="next-link" href="/posts/continuous-functions.html">older &raquo;</a><span class="prev-link-subdued">&laquo; newer</span></div>
 <div id="post">
-<h1>Epimorphisms and Surjectivity</h1><span class="post-created">Posted 2012-02-23 22:52:10  PST</span><blockquote>
+<h1>Epimorphisms and Surjectivity</h1><span class="post-created">Posted 2012-02-24 15:23:30  PST</span><blockquote>
 <p><strong>Homework spoiler alert / disclaimer</strong>: This post might contain a homework problem solution, and of course it might even be wrong! So if you are doing the exercise mentioned below, read on at your own risk.</p>
 </blockquote>
 <p>I'm currently working through some exercises in <a href="http://www.ams.org/bookstore-getitem/item=GSM-104">Paolo Aluffi's text, <em>Algebra: Chapter 0</em></a>, and I've come to an exercise asking for a proof of the following:</p>
 <blockquote>
-<p>A function <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is surjective if and only if it is an epimorphism.</p>
+<p>A function <IMG CLASS="math" SRC="/generated-images/eqn248.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is surjective if and only if it is an epimorphism.</p>
 </blockquote>
 <p>For context, here is the accompanying definition of <em>epimorphism</em>:</p>
 <blockquote>
-<p>A function <IMG CLASS="math" SRC="/generated-images/eqn095.png" WIDTH=91 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an <em>epimorphism</em> if for all sets <IMG CLASS="math" SRC="/generated-images/eqn115.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and all functions <IMG CLASS="math" SRC="/generated-images/eqn096.png" WIDTH=125 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;">, <IMG CLASS="displaymath" SRC="/generated-images/eqn097.png" WIDTH=241 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>A function <IMG CLASS="math" SRC="/generated-images/eqn249.png" WIDTH=91 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an <em>epimorphism</em> if for all sets <IMG CLASS="math" SRC="/generated-images/eqn250.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and all functions <IMG CLASS="math" SRC="/generated-images/eqn251.png" WIDTH=125 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;">, <IMG CLASS="displaymath" SRC="/generated-images/eqn265.png" WIDTH=246 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
 </blockquote>
 <p>This proof necessarily has two parts, one for each direction of the &quot;iff&quot;. In this post I'm going to try to work out and show the two sides to the proof.</p>
 <h2 id="part-one">Part One</h2>
@@ -39,30 +39,25 @@ Blog = {
 <p>Show that if a function is surjective, then it is an epimorphism.</p>
 </blockquote>
 <p>I found this part of the proof to be pretty straightforward, in part because it is so similar to the analogous proof for monomorphisms.</p>
-<p>If <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is surjective, then <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> has a right-inverse <IMG CLASS="math" SRC="/generated-images/eqn102.png" WIDTH=90 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;"> such that <IMG CLASS="math" SRC="/generated-images/eqn111.png" WIDTH=96 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;">. Now assume that <IMG CLASS="math" SRC="/generated-images/eqn103.png" WIDTH=19 HEIGHT=16 STYLE="vertical-align: -5px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn104.png" WIDTH=19 HEIGHT=16 STYLE="vertical-align: -5px; margin: 0;"> are arbitrary functions such that</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn159.png" WIDTH=126 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>Then we can apply <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;">'s right-inverse on both sides:</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn106.png" WIDTH=214 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>By associativity of <IMG CLASS="math" SRC="/generated-images/eqn107.png" WIDTH=12 HEIGHT=14 STYLE="vertical-align: -2px; margin: 0;"> we have:</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn108.png" WIDTH=212 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>By simplification of <IMG CLASS="math" SRC="/generated-images/eqn207.png" WIDTH=43 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> we have:</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn112.png" WIDTH=158 HEIGHT=21 STYLE="vertical-align: -4px; margin: 0;"></p>
+<p>Let <IMG CLASS="math" SRC="/generated-images/eqn264.png" WIDTH=91 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> be a surjective function. We can choose <IMG CLASS="math" SRC="/generated-images/eqn276.png" WIDTH=125 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;"> by the definition such that</p>
+<p><IMG CLASS="displaymath" SRC="/generated-images/eqn265.png" WIDTH=246 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>Since <IMG CLASS="math" SRC="/generated-images/eqn248.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is surjective, it has a right-inverse <IMG CLASS="math" SRC="/generated-images/eqn253.png" WIDTH=90 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;"> such that <IMG CLASS="math" SRC="/generated-images/eqn254.png" WIDTH=96 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;">. We can apply <IMG CLASS="math" SRC="/generated-images/eqn248.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;">'s right-inverse on both sides:</p>
+<p><IMG CLASS="displaymath" SRC="/generated-images/eqn272.png" WIDTH=218 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>By associativity of <IMG CLASS="math" SRC="/generated-images/eqn259.png" WIDTH=12 HEIGHT=14 STYLE="vertical-align: -2px; margin: 0;"> we have</p>
+<p><IMG CLASS="displaymath" SRC="/generated-images/eqn273.png" WIDTH=218 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>By simplification of <IMG CLASS="math" SRC="/generated-images/eqn261.png" WIDTH=43 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> we have</p>
+<p><IMG CLASS="displaymath" SRC="/generated-images/eqn262.png" WIDTH=158 HEIGHT=21 STYLE="vertical-align: -4px; margin: 0;"></p>
 <p>so</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn246.png" WIDTH=64 HEIGHT=16 STYLE="vertical-align: -4px; margin: 0;"></p>
-<p>So <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an epimorphism by the definition.</p>
+<p><IMG CLASS="displaymath" SRC="/generated-images/eqn274.png" WIDTH=69 HEIGHT=16 STYLE="vertical-align: -4px; margin: 0;"></p>
+<p>So <IMG CLASS="math" SRC="/generated-images/eqn248.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an epimorphism by the definition.</p>
 <h2 id="part-two">Part Two</h2>
 <blockquote>
 <p>Show that if a function is an epimorphism, then it is surjective.</p>
 </blockquote>
-<p>I found this part of the proof to be much more difficult to formulate in a convincing way. I'm still not entirely sure that this is the &quot;right&quot; proof.</p>
-<p>If <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an epimorphism, then by the definition we have</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn097.png" WIDTH=241 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>We choose two functions <IMG CLASS="math" SRC="/generated-images/eqn096.png" WIDTH=125 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;"> as described above. Then,</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn175.png" WIDTH=285 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>In particular, the functions are equal up to a point: <IMG CLASS="math" SRC="/generated-images/eqn162.png" WIDTH=160 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;">. However, if <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is not surjective, we can't be sure that <IMG CLASS="math" SRC="/generated-images/eqn247.png" WIDTH=64 HEIGHT=16 STYLE="vertical-align: -5px; margin: 0;"> for all inputs, just the inputs <IMG CLASS="math" SRC="/generated-images/eqn119.png" WIDTH=68 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;">.</p>
-<p>Now, let's assume that <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is not surjective. Then there is some <IMG CLASS="math" SRC="/generated-images/eqn124.png" WIDTH=68 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;">. If so, it's possible that <IMG CLASS="math" SRC="/generated-images/eqn161.png" WIDTH=110 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> so the implication that they are the same function does not hold. Therefore, for the implication to hold, <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> must be surjective.</p>
-<h2 id="afterword">Afterword</h2>
-<p>I'm uncomfortable with the last bit of Part Two because it doesn't so much show that <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> <em>is</em> surjective as it shows that if <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> isn't surjective, there is a problem. This may be equivalent, but somehow it doesn't feel quite convincing enough. In a way, it feels like cheating because I'd rather arrive at the result by showing that surjectivity is a <em>consequence</em> instead of a <em>requirement</em>. If you have any advice, comment!</p>
+<p>If <IMG CLASS="math" SRC="/generated-images/eqn264.png" WIDTH=91 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an epimorphism, then by the above definition we can choose two functions <IMG CLASS="math" SRC="/generated-images/eqn251.png" WIDTH=125 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;"> as described above such that</p>
+<p><IMG CLASS="displaymath" SRC="/generated-images/eqn265.png" WIDTH=246 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>Now assume that <IMG CLASS="math" SRC="/generated-images/eqn248.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is not surjective. Then there is some <IMG CLASS="math" SRC="/generated-images/eqn266.png" WIDTH=50 HEIGHT=19 STYLE="vertical-align: -2px; margin: 0;"> such that <IMG CLASS="math" SRC="/generated-images/eqn267.png" WIDTH=68 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;">. If so, it's possible that <IMG CLASS="math" SRC="/generated-images/eqn268.png" WIDTH=110 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> so the implication that <IMG CLASS="math" SRC="/generated-images/eqn271.png" WIDTH=64 HEIGHT=16 STYLE="vertical-align: -5px; margin: 0;"> does not hold. Therefore, for the implication to hold, <IMG CLASS="math" SRC="/generated-images/eqn248.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> must be surjective.</p>
+<p>Thanks to Jason Dagit for tons of help!</p>
 </div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
