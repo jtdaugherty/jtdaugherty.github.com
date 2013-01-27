@@ -6,7 +6,44 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssfonts/fonts-min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css"/>
     <link rel="alternate" type="application/rss+xml" href="http://jtdaugherty.github.com/feed.xml"/>
-    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config(
+      {"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+       tex2jax: {
+         element: null,
+         preview: "none",
+         skipTags: ["script","noscript","style","textarea","pre","code"],
+         inlineMath: [
+           ['$', '$'],
+           ["\\(", "\\)"],
+         ],
+         displayMath: [
+           ['$$', '$$'],
+           ["\\[", "\\]"],
+         ],
+         processEscapes: true,
+         ignoreClass: "tex2jax_ignore|dno"
+       },
+       TeX: {
+         noUndefined: { attributes: {
+                          mathcolor: "red",
+                          mathbackground: "#FFEEEE",
+                          mathsize: "90%" }
+                      }
+       },
+       messageStyle: "none"
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript">
+  // Uncomment this code and set the style of the "page" element
+  // below to visibility: hidden initially if you don't like the
+  // MathJax flicker during the rendering process. :(
+  // MathJax.Hub.Queue(function () {
+  //     document.getElementById("page").style.visibility = "visible";
+  // });
+</script>
+
   </head>
   <body>
     <div id="page">
@@ -20,18 +57,19 @@ Blog = {
 };
 </script>
 
-<div id="prev-next-links"><a class="next-link" href="/posts/continuous-functions.html">older &raquo;</a><span class="prev-link-subdued">&laquo; newer</span></div>
+<div id="prev-next-links"><a class="next-link" href="/posts/continuous-functions.html">older &raquo;</a><a class="prev-link" href="/posts/bookrec-how-to-succeed.html">&laquo; newer</a></div>
 <div id="post">
-<h1>Epimorphisms and Surjectivity</h1><span class="post-created">Posted 2012-02-24 18:43:03  PST</span><blockquote>
+<h1>Epimorphisms and Surjectivity</h1><span class="post-created">Posted 2013-01-26 19:55:11  PST</span><blockquote>
 <p><strong>Homework spoiler alert / disclaimer</strong>: This post might contain a homework problem solution, and of course it might even be wrong! So if you are doing the exercise mentioned below, read on at your own risk.</p>
 </blockquote>
 <p>I'm currently working through some exercises in <a href="http://www.ams.org/bookstore-getitem/item=GSM-104">Paolo Aluffi's text, <em>Algebra: Chapter 0</em></a>, and I've come to an exercise asking for a proof of the following:</p>
 <blockquote>
-<p>A function <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is surjective if and only if it is an epimorphism.</p>
+<p>A function \(f\) is surjective if and only if it is an epimorphism.</p>
 </blockquote>
 <p>For context, here is the accompanying definition of <em>epimorphism</em>:</p>
 <blockquote>
-<p>A function <IMG CLASS="math" SRC="/generated-images/eqn095.png" WIDTH=91 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an <em>epimorphism</em> if for all sets <IMG CLASS="math" SRC="/generated-images/eqn115.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and all functions <IMG CLASS="math" SRC="/generated-images/eqn096.png" WIDTH=125 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;">, <IMG CLASS="displaymath" SRC="/generated-images/eqn282.png" WIDTH=246 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>A function \(f:A \to B\) is an <em>epimorphism</em> if for all sets \(Z\) and all functions \(a_1, a_2 : B \to Z\), \[a_1 \circ f = a_2 \circ f
+\implies a_1 = a_2.\]</p>
 </blockquote>
 <p>This proof necessarily has two parts, one for each direction of the &quot;iff&quot;. In this post I'm going to try to work out and show the two sides to the proof.</p>
 <h2 id="part-one">Part One</h2>
@@ -39,24 +77,24 @@ Blog = {
 <p>Show that if a function is surjective, then it is an epimorphism.</p>
 </blockquote>
 <p>I found this part of the proof to be pretty straightforward, in part because it is so similar to the analogous proof for monomorphisms.</p>
-<p>Let <IMG CLASS="math" SRC="/generated-images/eqn283.png" WIDTH=91 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> be a surjective function. Choose <IMG CLASS="math" SRC="/generated-images/eqn284.png" WIDTH=125 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;"> such that</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn282.png" WIDTH=246 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>Since <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is surjective, it has a right-inverse <IMG CLASS="math" SRC="/generated-images/eqn102.png" WIDTH=90 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;"> such that <IMG CLASS="math" SRC="/generated-images/eqn111.png" WIDTH=96 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;">. We can apply <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;">'s right-inverse on both sides:</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn285.png" WIDTH=218 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>By associativity of <IMG CLASS="math" SRC="/generated-images/eqn107.png" WIDTH=12 HEIGHT=14 STYLE="vertical-align: -2px; margin: 0;"> we have</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn286.png" WIDTH=218 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>By simplification of <IMG CLASS="math" SRC="/generated-images/eqn207.png" WIDTH=43 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> we have</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn112.png" WIDTH=158 HEIGHT=21 STYLE="vertical-align: -4px; margin: 0;"></p>
+<p>Let \(f: A \to B\) be a surjective function. Choose \(a_1, a_2: B \to Z\) such that</p>
+<p>\[a_1 \circ f = a_2 \circ f \implies a_1 = a_2.\]</p>
+<p>Since \(f\) is surjective, it has a right-inverse \(g : B \to A\) such that \(f \circ g = \textrm{id}_B\). We can apply \(f\)'s right-inverse on both sides:</p>
+<p>\[(a_1 \circ f) \circ g = (a_2 \circ f) \circ g.\]</p>
+<p>By associativity of \(\circ\) we have</p>
+<p>\[a_1 \circ (f \circ g) = a_2 \circ (f \circ g).\]</p>
+<p>By simplification of \(f \circ g\) we have</p>
+<p>\[a_1 \circ \textrm{id}_B = a_2 \circ \textrm{id}_B\]</p>
 <p>so</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn287.png" WIDTH=69 HEIGHT=16 STYLE="vertical-align: -4px; margin: 0;"></p>
-<p>So <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an epimorphism by the definition.</p>
+<p>\[a_1 = a_2.\]</p>
+<p>So \(f\) is an epimorphism by the definition.</p>
 <h2 id="part-two">Part Two</h2>
 <blockquote>
 <p>Show that if a function is an epimorphism, then it is surjective.</p>
 </blockquote>
-<p>If <IMG CLASS="math" SRC="/generated-images/eqn283.png" WIDTH=91 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is an epimorphism, then by the above definition we can choose two functions <IMG CLASS="math" SRC="/generated-images/eqn096.png" WIDTH=125 HEIGHT=21 STYLE="vertical-align: -5px; margin: 0;"> as described above such that</p>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn282.png" WIDTH=246 HEIGHT=22 STYLE="vertical-align: -6px; margin: 0;"></p>
-<p>Now assume that <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> is not surjective. Then there is some <IMG CLASS="math" SRC="/generated-images/eqn113.png" WIDTH=50 HEIGHT=19 STYLE="vertical-align: -2px; margin: 0;"> such that <IMG CLASS="math" SRC="/generated-images/eqn124.png" WIDTH=68 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;">. If so, it's possible that <IMG CLASS="math" SRC="/generated-images/eqn161.png" WIDTH=110 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> so the implication that <IMG CLASS="math" SRC="/generated-images/eqn247.png" WIDTH=64 HEIGHT=16 STYLE="vertical-align: -5px; margin: 0;"> does not hold. Therefore, for the implication to hold, <IMG CLASS="math" SRC="/generated-images/eqn009.png" WIDTH=14 HEIGHT=22 STYLE="vertical-align: -5px; margin: 0;"> must be surjective.</p>
+<p>If \(f: A \to B\) is an epimorphism, then by the above definition we can choose two functions \(a_1, a_2 : B \to Z\) as described above such that</p>
+<p>\[a_1 \circ f = a_2 \circ f \implies a_1 = a_2.\]</p>
+<p>Now assume that \(f\) is not surjective. Then there is some \(b \in B\) such that \(b \notin \textrm{im} f\). If so, it's possible that \(a_1(b) \neq a_2(b)\) so the implication that \(a_1 = a_2\) does not hold. Therefore, for the implication to hold, \(f\) must be surjective.</p>
 <p>Thanks to Jason Dagit for tons of help!</p>
 </div>
 <div id="disqus_thread"></div>

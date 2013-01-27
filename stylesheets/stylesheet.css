@@ -13,6 +13,16 @@ body {
   margin-top: 0px;
   min-height: 900px;
 }
+div.figure {
+  float: right;
+  text-align: center;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+p.caption {
+  display: none;
+  font-size: smaller;
+}
 #page {
   padding-top: 1em;
   padding-left: 1em;

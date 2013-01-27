@@ -6,7 +6,44 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssfonts/fonts-min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css"/>
     <link rel="alternate" type="application/rss+xml" href="http://jtdaugherty.github.com/feed.xml"/>
-    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config(
+      {"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+       tex2jax: {
+         element: null,
+         preview: "none",
+         skipTags: ["script","noscript","style","textarea","pre","code"],
+         inlineMath: [
+           ['$', '$'],
+           ["\\(", "\\)"],
+         ],
+         displayMath: [
+           ['$$', '$$'],
+           ["\\[", "\\]"],
+         ],
+         processEscapes: true,
+         ignoreClass: "tex2jax_ignore|dno"
+       },
+       TeX: {
+         noUndefined: { attributes: {
+                          mathcolor: "red",
+                          mathbackground: "#FFEEEE",
+                          mathsize: "90%" }
+                      }
+       },
+       messageStyle: "none"
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript">
+  // Uncomment this code and set the style of the "page" element
+  // below to visibility: hidden initially if you don't like the
+  // MathJax flicker during the rendering process. :(
+  // MathJax.Hub.Queue(function () {
+  //     document.getElementById("page").style.visibility = "visible";
+  // });
+</script>
+
   </head>
   <body>
     <div id="page">
@@ -22,7 +59,7 @@ Blog = {
 
 <div id="prev-next-links"><a class="next-link" href="/posts/introduction.html">older &raquo;</a><a class="prev-link" href="/posts/continuous-functions.html">&laquo; newer</a></div>
 <div id="post">
-<h1>Proofs in Mathematics</h1><span class="post-created">Posted 2012-02-16 23:08:33  PST</span><p>Mathematical education in grade school (and, to a certain extent, college) teaches the mechanics of mathematical problem-solving. Students learn to identify specific types of problems and to mechanically apply techniques to solve them. As a result, this type of math is little more than pattern recognition. You might recall this sort of pattern recognition when doing everything from word problems on up to applying the rules of differentiation and integration in Calculus. However, these problem-solving techniques are based on underlying principles. They work because those principles are logically consistent.</p>
+<h1>Proofs in Mathematics</h1><span class="post-created">Posted 2013-01-26 19:55:12  PST</span><p>Mathematical education in grade school (and, to a certain extent, college) teaches the mechanics of mathematical problem-solving. Students learn to identify specific types of problems and to mechanically apply techniques to solve them. As a result, this type of math is little more than pattern recognition. You might recall this sort of pattern recognition when doing everything from word problems on up to applying the rules of differentiation and integration in Calculus. However, these problem-solving techniques are based on underlying principles. They work because those principles are logically consistent.</p>
 <p>By &quot;consistent&quot; I refer to the logical consistency of mathematical ideas in relation to one another. In school you learn about the various arithmetic operations -- addition, subtraction, etc. -- and how they relate to each other using <a href="http://en.wikipedia.org/wiki/Distributivity">distributivity</a>, <a href="http://en.wikipedia.org/wiki/Associativity">associativity</a>, and <a href="http://en.wikipedia.org/wiki/Commutativity">commutativity</a>. These operations always work and they always yield the same results when applied in the same ways. So we say that these rules together are consistent.</p>
 <p>When problems and solutions become more complex than mere arithmetic problems, and when new ideas are produced or new structures invented, we need to be sure that we can take advantage of these new phenomena with confidence that they will behave correctly. So consistency is a central concern in mathematics at every level.</p>
 <p>The way that mathematicians handle this concern is by making convincing, step-by-step arguments about the tools they employ. These arguments are called <strong>proofs</strong>.</p>
@@ -32,56 +69,56 @@ Blog = {
 <p>A proof may provide a solid argument, but often it does not explain <em>why</em> it is so; it might not seem to provide <em>intuition</em> to help you understand the result. This is part of the thought process that goes into constructing the proof: it's the intuitive background for understanding the problem at hand. Most proofs are terse and will not provide this understanding explicitly because the purpose of a proof is to provide a sound foundation, whereas all of the so-called &quot;scratch work&quot; that went into actually constructing the proof is gone, making the final result seem trimmed and clean. You'll have to learn how to read proofs to build your own understanding. This takes practice in both reading and writing proofs to get a sense of how proofs are constructed.</p>
 <h2 id="an-example-set-operations">An Example: Set Operations</h2>
 <p>A fundamental tool in mathematics is the notion of a &quot;set.&quot; Many mathematics texts include a first chapter on how to use sets. This branch of mathematics -- Set theory -- is the study of behaviors and rules that govern how we can use and think about sets.</p>
-<p>A set is just a collection of elements, possibly empty. Unlike with some other mathematical structures, its elements are not <em>ordered</em>. A set is denoted with braces, and some example sets are <IMG CLASS="math" SRC="/generated-images/eqn064.png" WIDTH=27 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> <IMG CLASS="math" SRC="/generated-images/eqn065.png" WIDTH=37 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> <IMG CLASS="math" SRC="/generated-images/eqn066.png" WIDTH=126 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn067.png" WIDTH=208 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"></p>
-<p>Like numbers, sets support various operations. One such operation is the &quot;union&quot; operation, written <IMG CLASS="math" SRC="/generated-images/eqn068.png" WIDTH=15 HEIGHT=16 STYLE="vertical-align: -2px; margin: 0;">. We say that the &quot;union&quot; of two sets is the set of all elements from each original set. We write a union as <IMG CLASS="math" SRC="/generated-images/eqn069.png" WIDTH=101 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> For example:</p>
+<p>A set is just a collection of elements, possibly empty. Unlike with some other mathematical structures, its elements are not <em>ordered</em>. A set is denoted with braces, and some example sets are \(\{\},\) \(\{1\},\) \(\{\mbox{cat}, \mbox{dog}, \mbox{fox}\},\) and \(\{\ldots, -4, -2, 0, 2, 4, \ldots\}.\)</p>
+<p>Like numbers, sets support various operations. One such operation is the &quot;union&quot; operation, written \(\cup\). We say that the &quot;union&quot; of two sets is the set of all elements from each original set. We write a union as \(C = A \cup B.\) For example:</p>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn070.png" WIDTH=306 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>\[\{1, 3, 5\} \cup \{3, 5, 7, 9\} = \{1,3,5,7,9\}\]</p>
 </blockquote>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn071.png" WIDTH=149 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>\[\{14\} \cup \{\} = \{14\}\]</p>
 </blockquote>
-<p>Furthermore, we write the size of a set -- the number of elements contained in it -- as <IMG CLASS="math" SRC="/generated-images/eqn072.png" WIDTH=26 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;">. Thus <IMG CLASS="math" SRC="/generated-images/eqn073.png" WIDTH=69 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn074.png" WIDTH=97 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;">. We also refer to elements in the set by saying that <IMG CLASS="math" SRC="/generated-images/eqn075.png" WIDTH=52 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> if <IMG CLASS="math" SRC="/generated-images/eqn020.png" WIDTH=13 HEIGHT=12 STYLE="vertical-align: -2px; margin: 0;"> is one of the elements in <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;">, and similarly, <IMG CLASS="math" SRC="/generated-images/eqn077.png" WIDTH=52 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> if <IMG CLASS="math" SRC="/generated-images/eqn020.png" WIDTH=13 HEIGHT=12 STYLE="vertical-align: -2px; margin: 0;"> is not an element of <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;">.</p>
+<p>Furthermore, we write the size of a set -- the number of elements contained in it -- as \(|A|\). Thus \(|\{\}| = 0\) and \(|\{1, 2\}| = 2\). We also refer to elements in the set by saying that \(x \in A\) if \(x\) is one of the elements in \(A\), and similarly, \(x \notin A\) if \(x\) is not an element of \(A\).</p>
 <p>Now, let's suppose (for some reason) that it's useful to investigate the following <em>conjecture</em>, which says that given two sets, the size of their union is <em>no bigger than</em> their sizes combined:</p>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn078.png" WIDTH=167 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>\[|A \cup B| \le |A| + |B|\]</p>
 </blockquote>
-<p>Common sense might tell you that this is true, but we need to prove it beyond a shadow of a doubt <em>for all possible sets <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"></em>.</p>
+<p>Common sense might tell you that this is true, but we need to prove it beyond a shadow of a doubt <em>for all possible sets \(A\) and \(B\)</em>.</p>
 <h2 id="understanding-the-problem">Understanding the Problem</h2>
 <p>Let's start with a few concrete examples to check the conjecture.</p>
-<p>(Example 1) What if <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> are both empty?</p>
+<p>(Example 1) What if \(A\) and \(B\) are both empty?</p>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn080.png" WIDTH=186 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>\[|\{\} \cup \{\}| \le |\{\}| + |\{\}|\]</p>
 </blockquote>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn081.png" WIDTH=82 HEIGHT=21 STYLE="vertical-align: -4px; margin: 0;"></p>
+<p>\[0 \le 0 + 0\]</p>
 </blockquote>
-<p>(Example 2) If only <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> is empty:</p>
+<p>(Example 2) If only \(A\) is empty:</p>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn082.png" WIDTH=243 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
-</blockquote>
-<blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn083.png" WIDTH=82 HEIGHT=21 STYLE="vertical-align: -4px; margin: 0;"></p>
-</blockquote>
-<p>(Example 3) If <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> are equal and non-empty:</p>
-<blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn084.png" WIDTH=300 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>\[|\{\} \cup \{1, 2\}| \le |\{\}| + |\{1, 2\}|\]</p>
 </blockquote>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn085.png" WIDTH=82 HEIGHT=21 STYLE="vertical-align: -4px; margin: 0;"></p>
+<p>\[2 \le 0 + 2\]</p>
 </blockquote>
-<p>We should look at the condition,<IMG CLASS="math" SRC="/generated-images/eqn086.png" WIDTH=22 HEIGHT=19 STYLE="vertical-align: -3px; margin: 0;">. This suggests we can partition the equation into two cases:</p>
+<p>(Example 3) If \(A\) and \(B\) are equal and non-empty:</p>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn087.png" WIDTH=245 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>\[|\{1, 2\} \cup \{1, 2\}| \le |\{1, 2\}| + |\{1, 2\}|\]</p>
+</blockquote>
+<blockquote>
+<p>\[2 \le 2 + 2\]</p>
+</blockquote>
+<p>We should look at the condition,\(\le\). This suggests we can partition the equation into two cases:</p>
+<blockquote>
+<p>\[\mbox{(Case 1) } |A \cup B| &lt; |A| + |B|\]</p>
 </blockquote>
 <p>and</p>
 <blockquote>
-<p><IMG CLASS="displaymath" SRC="/generated-images/eqn088.png" WIDTH=245 HEIGHT=24 STYLE="vertical-align: -6px; margin: 0;"></p>
+<p>\[\mbox{(Case 2) } |A \cup B| = |A| + |B|\]</p>
 </blockquote>
-<p>In Case 1, <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> have some elements in common; they must, since the size of the union is smaller, which means that some elements are counted twice on the right-hand side of the equation (see Example 3 above). In Case 2, however, the sets are <em>disjoint</em>, meaning they share no common elements. In this case, each element in <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> account for an element in <IMG CLASS="math" SRC="/generated-images/eqn089.png" WIDTH=54 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;">, so the sizes are the same.</p>
+<p>In Case 1, \(A\) and \(B\) have some elements in common; they must, since the size of the union is smaller, which means that some elements are counted twice on the right-hand side of the equation (see Example 3 above). In Case 2, however, the sets are <em>disjoint</em>, meaning they share no common elements. In this case, each element in \(A\) and \(B\) account for an element in \(A \cup B\), so the sizes are the same.</p>
 <h2 id="the-argument">The Argument</h2>
 <p>Based on the examples and our understanding above, we can make an argument about the conjecture:</p>
 <blockquote>
-<p>We show that for any sets <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;">, <IMG CLASS="math" SRC="/generated-images/eqn090.png" WIDTH=166 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;">. Suppose that <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> are disjoint. Then <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> share no common elements, so <IMG CLASS="math" SRC="/generated-images/eqn091.png" WIDTH=167 HEIGHT=24 STYLE="vertical-align: -7px; margin: 0;"> since all elements present in either set will be present in the union. Now instead suppose that <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> are not disjoint. Then there is at least one element <IMG CLASS="math" SRC="/generated-images/eqn075.png" WIDTH=52 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> such that <IMG CLASS="math" SRC="/generated-images/eqn092.png" WIDTH=53 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;">. Thus, the union of <IMG CLASS="math" SRC="/generated-images/eqn076.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> and <IMG CLASS="math" SRC="/generated-images/eqn079.png" WIDTH=18 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"> will always be smaller since some elements are in common. <IMG CLASS="math" SRC="/generated-images/eqn093.png" WIDTH=17 HEIGHT=17 STYLE="vertical-align: -2px; margin: 0;"></p>
+<p>We show that for any sets \(A\) and \(B\), \(|A \cup B| \le |A| \cup |B|\). Suppose that \(A\) and \(B\) are disjoint. Then \(A\) and \(B\) share no common elements, so \(|A| + |B| = |A \cup B|\) since all elements present in either set will be present in the union. Now instead suppose that \(A\) and \(B\) are not disjoint. Then there is at least one element \(x \in A\) such that \(x \in B\). Thus, the union of \(A\) and \(B\) will always be smaller since some elements are in common. \(\square\)</p>
 </blockquote>
 <p>This sort of argument is in fact a proof; it covers all of the possible cases and illustrates how the conjecture holds in each. Thus, we have proven it and now call it a <em>theorem</em>. Now, when we encounter a problem that relies on set sizes and unions, we may be able to use this result to make further proofs possible.</p>
 <h2 id="further-reading">Further Reading</h2>

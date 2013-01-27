@@ -6,7 +6,44 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssfonts/fonts-min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css"/>
     <link rel="alternate" type="application/rss+xml" href="http://jtdaugherty.github.com/feed.xml"/>
-    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config(
+      {"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+       tex2jax: {
+         element: null,
+         preview: "none",
+         skipTags: ["script","noscript","style","textarea","pre","code"],
+         inlineMath: [
+           ['$', '$'],
+           ["\\(", "\\)"],
+         ],
+         displayMath: [
+           ['$$', '$$'],
+           ["\\[", "\\]"],
+         ],
+         processEscapes: true,
+         ignoreClass: "tex2jax_ignore|dno"
+       },
+       TeX: {
+         noUndefined: { attributes: {
+                          mathcolor: "red",
+                          mathbackground: "#FFEEEE",
+                          mathsize: "90%" }
+                      }
+       },
+       messageStyle: "none"
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript">
+  // Uncomment this code and set the style of the "page" element
+  // below to visibility: hidden initially if you don't like the
+  // MathJax flicker during the rendering process. :(
+  // MathJax.Hub.Queue(function () {
+  //     document.getElementById("page").style.visibility = "visible";
+  // });
+</script>
+
   </head>
   <body>
     <div id="page">
@@ -14,10 +51,11 @@
         <a id="listing" href="/posts/">all posts</a>
         <a href="/">Derivative Works</a>
       </div>
-      <div id="all-posts"><div class="listing-entry"><span class="post-title"><a href="/posts/epimorphisms-and-surjectivity.html">Epimorphisms and Surjectivity</a></span><span class="post-created">Posted 2012-02-24 18:43:03  PST</span></div>
-<div class="listing-entry"><span class="post-title"><a href="/posts/continuous-functions.html">Continuous Functions</a></span><span class="post-created">Posted 2012-02-18 11:35:15  PST</span></div>
-<div class="listing-entry"><span class="post-title"><a href="/posts/proofs-in-mathematics.html">Proofs in Mathematics</a></span><span class="post-created">Posted 2012-02-16 23:08:33  PST</span></div>
-<div class="listing-entry"><span class="post-title"><a href="/posts/introduction.html">Introduction</a></span><span class="post-created">Posted 2012-02-22 20:40:23  PST</span></div>
+      <div id="all-posts"><div class="listing-entry"><span class="post-title"><a href="/posts/bookrec-how-to-succeed.html">Book Recommendation: How to Succeed in College Mathematics</a></span><span class="post-created">Posted 2013-01-26 23:19:27  PST</span></div>
+<div class="listing-entry"><span class="post-title"><a href="/posts/epimorphisms-and-surjectivity.html">Epimorphisms and Surjectivity</a></span><span class="post-created">Posted 2013-01-26 19:55:11  PST</span></div>
+<div class="listing-entry"><span class="post-title"><a href="/posts/continuous-functions.html">Continuous Functions</a></span><span class="post-created">Posted 2013-01-26 19:55:11  PST</span></div>
+<div class="listing-entry"><span class="post-title"><a href="/posts/proofs-in-mathematics.html">Proofs in Mathematics</a></span><span class="post-created">Posted 2013-01-26 19:55:12  PST</span></div>
+<div class="listing-entry"><span class="post-title"><a href="/posts/introduction.html">Introduction</a></span><span class="post-created">Posted 2013-01-26 19:55:12  PST</span></div>
 </div>
       <div id="footer">
         Copyright &copy; 2010-2012 Jonathan Daugherty

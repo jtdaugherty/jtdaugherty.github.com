@@ -6,7 +6,44 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssfonts/fonts-min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css"/>
     <link rel="alternate" type="application/rss+xml" href="http://jtdaugherty.github.com/feed.xml"/>
-    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config(
+      {"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+       tex2jax: {
+         element: null,
+         preview: "none",
+         skipTags: ["script","noscript","style","textarea","pre","code"],
+         inlineMath: [
+           ['$', '$'],
+           ["\\(", "\\)"],
+         ],
+         displayMath: [
+           ['$$', '$$'],
+           ["\\[", "\\]"],
+         ],
+         processEscapes: true,
+         ignoreClass: "tex2jax_ignore|dno"
+       },
+       TeX: {
+         noUndefined: { attributes: {
+                          mathcolor: "red",
+                          mathbackground: "#FFEEEE",
+                          mathsize: "90%" }
+                      }
+       },
+       messageStyle: "none"
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript">
+  // Uncomment this code and set the style of the "page" element
+  // below to visibility: hidden initially if you don't like the
+  // MathJax flicker during the rendering process. :(
+  // MathJax.Hub.Queue(function () {
+  //     document.getElementById("page").style.visibility = "visible";
+  // });
+</script>
+
   </head>
   <body>
     <div id="page">
@@ -22,7 +59,7 @@ Blog = {
 
 <div id="prev-next-links"><span class="next-link-subdued">older &raquo;</span><a class="prev-link" href="/posts/proofs-in-mathematics.html">&laquo; newer</a></div>
 <div id="post">
-<h1>Introduction</h1><span class="post-created">Posted 2012-02-22 20:40:23  PST</span><p>My name's Jonathan. I'm usually up to <a
+<h1>Introduction</h1><span class="post-created">Posted 2013-01-26 19:55:12  PST</span><p>My name's Jonathan. I'm usually up to <a
 href="http://galois.com/">software engineering</a>, but I'm also a spare-time student of mathematics. On this blog I'll be talking about topics in mathematics specifically related to my studies and interests, in addition to general topics.</p>
 <p>Things you'll see on this blog may include:</p>
 <ul>
