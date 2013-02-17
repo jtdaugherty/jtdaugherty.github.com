@@ -53,15 +53,22 @@
         <a id="listing" href="/posts/">all posts</a>
         <a href="/">Derivative Works</a>
       </div>
-      <script type="text/javascript">
-Blog = {
-  pageName: "continuous-functions"
-};
-</script>
+      <div id="prev-next-links">
+      <a class="prev-link" href="/posts/proofs-in-mathematics.html">older &raquo;</a>
+  
+      <a class="next-link" href="/posts/epimorphisms-and-surjectivity.html">&laquo; newer</a>
+  
+</div>
 
-<div id="prev-next-links"><a class="next-link" href="/posts/proofs-in-mathematics.html">older &raquo;</a><a class="prev-link" href="/posts/epimorphisms-and-surjectivity.html">&laquo; newer</a></div>
+<div style="display: none;">
+\(
+
+\)
+</div>
 <div id="post">
-<h1>Continuous Functions</h1><span class="post-created">Posted 2013-01-26 19:55:11  PST</span><blockquote>
+<h1>Continuous Functions</h1>
+<span class="post-created">posted February 18, 2012</span>
+<blockquote>
 <p>In this post I'll explain some definitions and mechanics of continuous functions. I assume familiarity with function signature notation and related terminology such as domain, codomain, preimage, etc.).</p>
 </blockquote>
 <p>In Calculus we need to differentiate functions, but not all functions are <em>differentiable</em>. A function is differentiable if its derivative exists at every point in its domain. For example, \(f(x) = x^2\) is differentiable everywhere in its domain \(\mathbb{R}\) but the absolute value function \(\mbox{abs}(x) = |x|\) is differentiable only at \(x \ne 0\). \(\mbox{abs}\) is differentiable arbitrarily close to \(x = 0\) on either side, but at \(x = 0\), \(\mbox{abs}\) has a <em>cusp</em>, or a singular point with no neighboring points in the curve of the function. We can't decide what the slope of the derivative is at \(x = 0\), so \(\mbox{abs}\) is not differentiable at \(x = 0\).</p>
@@ -109,7 +116,7 @@ Blog = {
   /**
     * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
     */
-  var disqus_identifier = Blog.pageName;
+  var disqus_identifier = "continuous-functions";
   (function() {
    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
    dsq.src = 'http://derivativeworks.disqus.com/embed.js';

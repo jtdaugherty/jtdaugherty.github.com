@@ -53,85 +53,97 @@
         <a id="listing" href="/posts/">all posts</a>
         <a href="/">Derivative Works</a>
       </div>
-      <script type="text/javascript">
-Blog = {
-  pageName: "linear-algebra-1"
-};
-</script>
+      <div id="prev-next-links">
+      <a class="prev-link" href="/posts/bookrec-how-to-succeed.html">older &raquo;</a>
+  
+      <a class="next-link-subdued">&laquo; newer</a>
+  
+</div>
 
-<div id="prev-next-links"><a class="next-link" href="/posts/bookrec-how-to-succeed.html">older &raquo;</a><span class="prev-link-subdued">&laquo; newer</span></div>
+<div style="display: none;">
+\(
+\newcommand{\vxy}[2]{\begin{bmatrix}#1 \\ #2\end{bmatrix}}
+\newcommand{\vxyz}[3]{\begin{bmatrix}#1 \\ #2 \\ #3\end{bmatrix}}
+\newcommand{\uu}[0]{\mathbf{u}}
+\newcommand{\uuu}[0]{\mathbf{\hat{u}}}
+\newcommand{\vv}[0]{\mathbf{v}}
+\newcommand{\sm}[1]{\bigl[\begin{smallmatrix}#1\end{smallmatrix}\bigr]}
+\)
+</div>
 <div id="post">
-<h1>Linear Algebra, Part 1: Vectors</h1><span class="post-created">Posted 2013-02-14 19:43:18  PST</span><blockquote>
+<h1>Linear Algebra, Part 1: Vectors</h1>
+<span class="post-created">posted February 14, 2013</span>
+<blockquote>
 <p>Linear algebra is the study of systems of linear equations and vector spaces. I'll be writing a series of posts on this topic as I progress through my study of it. This first post introduces some foundational ideas about <strong>vectors</strong>.</p>
 </blockquote>
-<p><img src="/generated-images/tikz-e78eef61077569a397acbb6a7d07f10727f94978.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-e87a183405dc6f789e3378c0f1b030ac5a61247a.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-fc0b4d34d397bd50f6c5d2ebb09356d12dea6f81.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-5d7c8415bfad6cf7052697bc9dfc508e12555007.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-8ee8c7f5d98350a0b92a383f3bc87ec978ffaae8.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-cadfb178aff1bf493624fb2eae42d098c8025f13.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-7f192956e9674ce9fa99532d5e9a0b62e4930b6f.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-4675db01beb8b5ea639a2d0515ab8dae316218a2.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-9e388df7a17dd6047cbe731876b93f70f613a6c0.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-14dae64566d414e8734cc2d4e2961df469a4734c.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-f933884011fc35b4b6d0fa5b50d8144ade690276.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-e73117d5362065f782271742ff74597a8cd16c5f.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-847e0caad98d791e676eb1d5f4e4f4fba1dde062.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-cb94035807d91efdd91ab4b476440ac512613fb7.png" class="eq-right"></p>
 <p>A <strong>vector</strong> is a sequence of values. The values in the vector's sequence are called its <strong>components</strong>. In these blog posts we'll be concerned with vectors with 2 or 3 components.</p>
-<p>Notationally, a vector with \(n\) components is represented as an \(n\)-row, one-column matrix. The vector is given a bold single-letter name such as \(\mathbf{u}\) or \(\mathbf{v}\). Some example vectors are:</p>
+<p>Notationally, a vector with \(n\) components is represented as an \(n\)-row, one-column matrix. The vector is given a bold single-letter name such as \(\uu\) or \(\vv\). Some example vectors are:</p>
 <p>\[
-\mathbf{u}= \begin{bmatrix}2 \\ 7\end{bmatrix} ~~~~
-\mathbf{v}= \begin{bmatrix}1 \\ 3 \\ -2\end{bmatrix}
+\uu = \vxy 2 7 ~~~~
+\vv = \vxyz 1 3 {-2}
 \]</p>
-<p>We refer to the \(i\)th component of a vector \(\mathbf{u}\) as \(\mathbf{u}_i\); using the above vectors as examples, \(\mathbf{u}_2 = 7\) and \(\mathbf{v}_3 = -2\).</p>
+<p>We refer to the \(i\)th component of a vector \(\uu\) as \(\uu_i\); using the above vectors as examples, \(\uu_2 = 7\) and \(\vv_3 = -2\).</p>
 <h2 id="vector-operations">Vector operations</h2>
 <p>Vectors can be added or subtracted by adding or subtracting their respective elements.</p>
 <p>\[
-\mathbf{u}= \begin{bmatrix}1 \\ 7\end{bmatrix} ~~~~
-\mathbf{v}= \begin{bmatrix}3 \\ 5\end{bmatrix} ~~~~
-\mathbf{u}- \mathbf{v}= \begin{bmatrix}1 - 3 \\ 7 - 5\end{bmatrix} = \begin{bmatrix}-2 \\ 2\end{bmatrix} ~~~~
-\mathbf{u}+ \mathbf{v}= \begin{bmatrix}1 + 3 \\ 7 + 5\end{bmatrix} = \begin{bmatrix}4 \\ 12\end{bmatrix}
+\uu = \vxy 1 7 ~~~~
+\vv = \vxy 3 5 ~~~~
+\uu - \vv = \vxy {1 - 3} {7 - 5} = \vxy {-2} {2} ~~~~
+\uu + \vv = \vxy {1 + 3} {7 + 5} = \vxy {4} {12}
 \]</p>
-<p>In general, for two \(n\)-dimensional vectors \(\mathbf{u}\) and \(\mathbf{v}\),</p>
+<p>In general, for two \(n\)-dimensional vectors \(\uu\) and \(\vv\),</p>
 <p>\[
-\mathbf{u}- \mathbf{v}= \begin{bmatrix}\mathbf{u}_1 - \mathbf{v}_1 \\ \vdots \\ \mathbf{u}_n - \mathbf{v}_n\end{bmatrix} ~~~~
-\mathbf{u}+ \mathbf{v}= \begin{bmatrix}\mathbf{u}_1 + \mathbf{v}_1 \\ \vdots \\ \mathbf{u}_n + \mathbf{v}_n\end{bmatrix}.
+\uu - \vv = \vxyz {\uu_1 - \vv_1} {\vdots} {\uu_n - \vv_n} ~~~~
+\uu + \vv = \vxyz {\uu_1 + \vv_1} {\vdots} {\uu_n + \vv_n}.
 \]</p>
-<p>Vectors can be multiplied by a number, called a <strong>scalar</strong>, which <em>scales</em> the vector's components as well as its magnitude. We write scalar multiplication as, e.g., \(2\mathbf{v}\).</p>
+<p>Vectors can be multiplied by a number, called a <strong>scalar</strong>, which <em>scales</em> the vector's components as well as its magnitude. We write scalar multiplication as, e.g., \(2\vv\).</p>
 <p>\[
-\mathbf{v}= \begin{bmatrix}2 \\ 5\end{bmatrix} ~~~~
-2\mathbf{v}= \begin{bmatrix}4 \\ 10\end{bmatrix}
+\vv = \vxy 2 5 ~~~~
+2\vv = \vxy 4 {10}
 \]</p>
-<p>To see how the scalar affects the magnitude, we can work it out in algebra. Given \(\mathbf{v}= \begin{bmatrix}2 \\ 3\end{bmatrix}\) and some scalar \(c\):</p>
+<p>To see how the scalar affects the magnitude, we can work it out in algebra. Given \(\vv = \vxy 2 3\) and some scalar \(c\):</p>
 <p>\[
 \begin{align*}
-c\mathbf{v}&amp;= c \begin{bmatrix}2 \\ 3\end{bmatrix} \\
-&amp;= \begin{bmatrix}2c \\ 3c\end{bmatrix} \\
-\|c\mathbf{v}\| &amp;= \sqrt{(2c)^2 + (3c)^2} \\
+c\vv &amp;= c \vxy 2 3 \\
+&amp;= \vxy {2c} {3c} \\
+\|c\vv\| &amp;= \sqrt{(2c)^2 + (3c)^2} \\
 &amp;= \sqrt{c^2(2^2 + 3^2)} \\
 &amp;= c \sqrt{2^2 + 3^2} \\
-&amp;= c\|\mathbf{v}\|.
+&amp;= c\|\vv\|.
 \end{align*}
 \]</p>
 <h2 id="geometry-of-a-single-vector">Geometry of a Single Vector</h2>
-<p>Typically vectors are represented like the one pictured in Figure 1. Given this geometric representation, a vector can be said to have a <em>direction</em> (which way it points) and a <em>magnitude</em> (its length). The vector's components \(\mathbf{u}_1\) and \(\mathbf{u}_2\) correspond to the \(x\) and \(y\) values coinciding with the endpoint of the vector.</p>
-<p>Another way to think about the geometry of vectors is to realize that <em>every vector corresponds to a right triangle</em> (see Figure 2). As a result, we already know the length of the vector from the Pythagorean Theorem. We write this value, the <em>length</em> or <em>magnitude</em> of the vector \(\mathbf{u}\), as \(\|\mathbf{u}\|\).</p>
+<p>Typically vectors are represented like the one pictured in Figure 1. Given this geometric representation, a vector can be said to have a <em>direction</em> (which way it points) and a <em>magnitude</em> (its length). The vector's components \(\uu_1\) and \(\uu_2\) correspond to the \(x\) and \(y\) values coinciding with the endpoint of the vector.</p>
+<p>Another way to think about the geometry of vectors is to realize that <em>every vector corresponds to a right triangle</em> (see Figure 2). As a result, we already know the length of the vector from the Pythagorean Theorem. We write this value, the <em>length</em> or <em>magnitude</em> of the vector \(\uu\), as \(\|\uu\|\).</p>
 <p>\[
-\mathbf{u}= \begin{bmatrix}2 \\ 1\end{bmatrix} ~~~~
-\|\mathbf{u}\| = \sqrt{2^2 + 1^2} = \sqrt{5}
+\uu = \vxy 2 1 ~~~~
+\|\uu\| = \sqrt{2^2 + 1^2} = \sqrt{5}
 \]</p>
-<p>What if the length of some vector \(\mathbf{u}\) is \(1\)? This is called a <strong>unit vector</strong>, which I'll write as \(\mathbf{\hat{u}}\) (pronounced &quot;you-hat&quot;). A unit vector can be seen in the radius of the unit circle where it is distanced from the \(x\) axis by some angle \(\theta\) (see Figure 3). Since the vector represents a right triangle, the vector's components are the side lengths. If a radius vector \(\mathbf{u}\) is \(\theta\) degrees from the \(x\) axis, then we can easily compute the angle \(\theta\):</p>
+<p>What if the length of some vector \(\uu\) is \(1\)? This is called a <strong>unit vector</strong>, which I'll write as \(\uuu\) (pronounced &quot;you-hat&quot;). A unit vector can be seen in the radius of the unit circle where it is distanced from the \(x\) axis by some angle \(\theta\) (see Figure 3). Since the vector represents a right triangle, the vector's components are the side lengths. If a radius vector \(\uu\) is \(\theta\) degrees from the \(x\) axis, then we can easily compute the angle \(\theta\):</p>
 <p>\[
-\mathbf{\hat{u}}= \begin{bmatrix}\cos \theta \\ \sin \theta\end{bmatrix} ~~~~
-\theta = \cos^{-1} \mathbf{\hat{u}}_1.
+\uuu = \vxy {\cos \theta} {\sin \theta} ~~~~
+\theta = \cos^{-1} \uuu_1.
 \]</p>
-<p>What if the length of a vector \(\mathbf{u}\) is greater than \(1\)? How can we determine the angle between \(\mathbf{u}\) and the \(x\) axis? Well, it would be easy to know \(\theta\) if we had a unit vector. To get a unit vector from \(\mathbf{u}\), we can scale it so that its length is \(1\). To do that, we divide its components by its length:</p>
+<p>What if the length of a vector \(\uu\) is greater than \(1\)? How can we determine the angle between \(\uu\) and the \(x\) axis? Well, it would be easy to know \(\theta\) if we had a unit vector. To get a unit vector from \(\uu\), we can scale it so that its length is \(1\). To do that, we divide its components by its length:</p>
 <p>\[
-\mathbf{u}= \begin{bmatrix}4 \\ 3\end{bmatrix} ~~~~
-\mathbf{\hat{u}}= \frac{\mathbf{u}}{\|\mathbf{u}\|} = \begin{bmatrix}\frac 4 5 \\ \frac 3 5\end{bmatrix} ~~~~
-\|\mathbf{\hat{u}}\| = \sqrt{\left(\frac 4 5\right)^2 + \left(\frac 3 5\right)^2} = 1.
+\uu = \vxy {4} {3} ~~~~
+\uuu = \frac{\uu}{\|\uu\|} = \vxy {\frac 4 5} {\frac 3 5} ~~~~
+\|\uuu\| = \sqrt{\left(\frac 4 5\right)^2 + \left(\frac 3 5\right)^2} = 1.
 \]</p>
-<p>What happens when we multiply a vector \(\mathbf{u}\) times a negative scalar, such as \(-2\mathbf{u}\)? If the scalar is negative, the resulting vector <em>points in exactly the opposite direction</em> (see Figure 4). If the scalar is not equal to \(-1\), the vector's magnitude is scaled, as well.</p>
+<p>What happens when we multiply a vector \(\uu\) times a negative scalar, such as \(-2\uu\)? If the scalar is negative, the resulting vector <em>points in exactly the opposite direction</em> (see Figure 4). If the scalar is not equal to \(-1\), the vector's magnitude is scaled, as well.</p>
 <h2 id="geometry-of-multiple-vectors">Geometry of Multiple Vectors</h2>
 <p>Now we get into something more interesting: the geometric representation of what happens when we add or subtract vectors.</p>
 <p>Figure 5 shows an example of two vectors and their sum. The geometry of the sum vector follows from the definition of vector addition: we added the \(x\) components of the vectors to get the new \(x\) component, and similarly for \(y\).</p>
-<p>In fact, if we were to attach \(\mathbf{u}\) and \(\mathbf{v}\) in a &quot;head-to-tail&quot; fashion so that \(\mathbf{v}\) starts where \(\mathbf{u}\) ends, then the resulting &quot;chain&quot; of vectors would end up in the same place as \(\mathbf{u}+ \mathbf{v}\) (see Figure 6).</p>
-<p>Now you can see that the vectors \(\mathbf{u}\) and \(\mathbf{v}\) in Figure 6 <em>form a parallelogram</em>. Their sum, \(\mathbf{u}+ \mathbf{v}\), forms one diagonal of this parallelogram.</p>
-<p>The other diagonal of the parallelogram -- connecting the ends of \(\mathbf{u}\) and \(\mathbf{v}\) -- is represented by the subtraction of one vector from the other (see Figure 7). Note that we are making a statement <em>only</em> about the <em>length</em> of the difference vector \(\mathbf{u}- \mathbf{v}\); it does not <em>originate</em> from the end of \(\mathbf{v}\), but from the origin as all vectors do. But we present it this way to illustrate its relationship to the other vector operations. The emphasis here is on the relationships between the magnitudes and directions of the various vectors involved.</p>
+<p>In fact, if we were to attach \(\uu\) and \(\vv\) in a &quot;head-to-tail&quot; fashion so that \(\vv\) starts where \(\uu\) ends, then the resulting &quot;chain&quot; of vectors would end up in the same place as \(\uu + \vv\) (see Figure 6).</p>
+<p>Now you can see that the vectors \(\uu\) and \(\vv\) in Figure 6 <em>form a parallelogram</em>. Their sum, \(\uu + \vv\), forms one diagonal of this parallelogram.</p>
+<p>The other diagonal of the parallelogram -- connecting the ends of \(\uu\) and \(\vv\) -- is represented by the subtraction of one vector from the other (see Figure 7). Note that we are making a statement <em>only</em> about the <em>length</em> of the difference vector \(\uu - \vv\); it does not <em>originate</em> from the end of \(\vv\), but from the origin as all vectors do. But we present it this way to illustrate its relationship to the other vector operations. The emphasis here is on the relationships between the magnitudes and directions of the various vectors involved.</p>
 <h2 id="up-next">Up Next</h2>
 <p>In the next post in this series, I'll cover dot products, the cosine rule, and the Schwartz and Triangle inequalities.</p>
 </div>
@@ -140,7 +152,7 @@ c\mathbf{v}&amp;= c \begin{bmatrix}2 \\ 3\end{bmatrix} \\
   /**
     * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
     */
-  var disqus_identifier = Blog.pageName;
+  var disqus_identifier = "linear-algebra-1";
   (function() {
    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
    dsq.src = 'http://derivativeworks.disqus.com/embed.js';

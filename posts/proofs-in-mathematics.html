@@ -53,15 +53,22 @@
         <a id="listing" href="/posts/">all posts</a>
         <a href="/">Derivative Works</a>
       </div>
-      <script type="text/javascript">
-Blog = {
-  pageName: "proofs-in-mathematics"
-};
-</script>
+      <div id="prev-next-links">
+      <a class="prev-link" href="/posts/introduction.html">older &raquo;</a>
+  
+      <a class="next-link" href="/posts/continuous-functions.html">&laquo; newer</a>
+  
+</div>
 
-<div id="prev-next-links"><a class="next-link" href="/posts/introduction.html">older &raquo;</a><a class="prev-link" href="/posts/continuous-functions.html">&laquo; newer</a></div>
+<div style="display: none;">
+\(
+
+\)
+</div>
 <div id="post">
-<h1>Proofs in Mathematics</h1><span class="post-created">Posted 2013-01-26 19:55:12  PST</span><p>Mathematical education in grade school (and, to a certain extent, college) teaches the mechanics of mathematical problem-solving. Students learn to identify specific types of problems and to mechanically apply techniques to solve them. As a result, this type of math is little more than pattern recognition. You might recall this sort of pattern recognition when doing everything from word problems on up to applying the rules of differentiation and integration in Calculus. However, these problem-solving techniques are based on underlying principles. They work because those principles are logically consistent.</p>
+<h1>Proofs in Mathematics</h1>
+<span class="post-created">posted August 15, 2010</span>
+<p>Mathematical education in grade school (and, to a certain extent, college) teaches the mechanics of mathematical problem-solving. Students learn to identify specific types of problems and to mechanically apply techniques to solve them. As a result, this type of math is little more than pattern recognition. You might recall this sort of pattern recognition when doing everything from word problems on up to applying the rules of differentiation and integration in Calculus. However, these problem-solving techniques are based on underlying principles. They work because those principles are logically consistent.</p>
 <p>By &quot;consistent&quot; I refer to the logical consistency of mathematical ideas in relation to one another. In school you learn about the various arithmetic operations -- addition, subtraction, etc. -- and how they relate to each other using <a href="http://en.wikipedia.org/wiki/Distributivity">distributivity</a>, <a href="http://en.wikipedia.org/wiki/Associativity">associativity</a>, and <a href="http://en.wikipedia.org/wiki/Commutativity">commutativity</a>. These operations always work and they always yield the same results when applied in the same ways. So we say that these rules together are consistent.</p>
 <p>When problems and solutions become more complex than mere arithmetic problems, and when new ideas are produced or new structures invented, we need to be sure that we can take advantage of these new phenomena with confidence that they will behave correctly. So consistency is a central concern in mathematics at every level.</p>
 <p>The way that mathematicians handle this concern is by making convincing, step-by-step arguments about the tools they employ. These arguments are called <strong>proofs</strong>.</p>
@@ -134,7 +141,7 @@ Blog = {
   /**
     * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
     */
-  var disqus_identifier = Blog.pageName;
+  var disqus_identifier = "proofs-in-mathematics";
   (function() {
    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
    dsq.src = 'http://derivativeworks.disqus.com/embed.js';

@@ -53,15 +53,22 @@
         <a id="listing" href="/posts/">all posts</a>
         <a href="/">Derivative Works</a>
       </div>
-      <script type="text/javascript">
-Blog = {
-  pageName: "introduction"
-};
-</script>
+      <div id="prev-next-links">
+      <a class="prev-link-subdued">older &raquo;</a>
+  
+      <a class="next-link" href="/posts/proofs-in-mathematics.html">&laquo; newer</a>
+  
+</div>
 
-<div id="prev-next-links"><span class="next-link-subdued">older &raquo;</span><a class="prev-link" href="/posts/proofs-in-mathematics.html">&laquo; newer</a></div>
+<div style="display: none;">
+\(
+
+\)
+</div>
 <div id="post">
-<h1>Introduction</h1><span class="post-created">Posted 2013-01-26 19:55:12  PST</span><p>My name's Jonathan. I'm usually up to <a
+<h1>Introduction</h1>
+<span class="post-created">posted August 6, 2010</span>
+<p>My name's Jonathan. I'm usually up to <a
 href="http://galois.com/">software engineering</a>, but I'm also a spare-time student of mathematics. On this blog I'll be talking about topics in mathematics specifically related to my studies and interests, in addition to general topics.</p>
 <p>Things you'll see on this blog may include:</p>
 <ul>
@@ -90,7 +97,7 @@ href="https://sourceforge.net/projects/gladtex/">gladTeX</a>.</p>
   /**
     * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
     */
-  var disqus_identifier = Blog.pageName;
+  var disqus_identifier = "introduction";
   (function() {
    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
    dsq.src = 'http://derivativeworks.disqus.com/embed.js';
