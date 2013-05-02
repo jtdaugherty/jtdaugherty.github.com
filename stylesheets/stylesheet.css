@@ -1,5 +1,5 @@
 html {
-  background: #003A6E;
+  background: #004B7F;
 }
 img {
   border: none;
@@ -7,16 +7,16 @@ img {
 body {
   font-family: "Georgia", serif;
   font-size: 16px;
-  margin-left: 3em;
-  margin-right: 3em;
+  margin: auto;
   background: #fff;
   margin-top: 0px;
   min-height: 900px;
+  width: 950px;
 }
 div.figure {
   float: right;
   text-align: center;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-bottom: 20px;
 }
 p.caption {
@@ -27,8 +27,8 @@ p.caption {
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  margin-left: 1em;
-  max-width: 1024px;
+  margin: auto;
+  width: 850px;
 }
 #header {
   font-size: 26px;
@@ -125,10 +125,9 @@ blockquote {
     margin-bottom: 0.5em;
 }
 .eq-right {
-    float: right;
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
-    clear: right;
+  float: right;
+  clear: right;
+  text-align: center;
 }
 .eq-center {
     display: block;
