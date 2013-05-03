@@ -1,50 +1,55 @@
 <rss version="2.0">
   <channel>
     <title>Derivative Works</title>
-    <link>http://jtdaugherty.github.com</link>
+    <link>http://jtdaugherty.github.io</link>
     <description>A blog about mathematics</description>
     <language>en-us</language>
     <managingEditor>drcygnus@gmail.com</managingEditor>
     <webMaster>drcygnus@gmail.com</webMaster>
-    <item><title>Linear Algebra, Part 3: Linear Combinations and Matrix Notation</title>
-<link>http://jtdaugherty.github.com/posts/linear-algebra-3.html</link>
+    <item><title>Linear Algebra, Part 4: Elimination</title>
+<link>http://jtdaugherty.github.io/posts/linear-algebra-4.html</link>
+<pubDate>Wed,  1 May 2013 00:00:00 UTC</pubDate>
+<guid>http://jtdaugherty.github.io/posts/linear-algebra-4.html</guid>
+</item>
+<item><title>Linear Algebra, Part 3: Linear Combinations and Matrix Notation</title>
+<link>http://jtdaugherty.github.io/posts/linear-algebra-3.html</link>
 <pubDate>Tue, 12 Mar 2013 00:00:00 UTC</pubDate>
-<guid>http://jtdaugherty.github.com/posts/linear-algebra-3.html</guid>
+<guid>http://jtdaugherty.github.io/posts/linear-algebra-3.html</guid>
 </item>
 <item><title>Linear Algebra, Part 2: the Dot Product</title>
-<link>http://jtdaugherty.github.com/posts/linear-algebra-2.html</link>
+<link>http://jtdaugherty.github.io/posts/linear-algebra-2.html</link>
 <pubDate>Wed, 20 Feb 2013 00:00:00 UTC</pubDate>
-<guid>http://jtdaugherty.github.com/posts/linear-algebra-2.html</guid>
+<guid>http://jtdaugherty.github.io/posts/linear-algebra-2.html</guid>
 </item>
 <item><title>Linear Algebra, Part 1: Vectors</title>
-<link>http://jtdaugherty.github.com/posts/linear-algebra-1.html</link>
+<link>http://jtdaugherty.github.io/posts/linear-algebra-1.html</link>
 <pubDate>Thu, 14 Feb 2013 00:00:00 UTC</pubDate>
-<guid>http://jtdaugherty.github.com/posts/linear-algebra-1.html</guid>
+<guid>http://jtdaugherty.github.io/posts/linear-algebra-1.html</guid>
 </item>
 <item><title>Book Recommendation: How to Succeed in College Mathematics</title>
-<link>http://jtdaugherty.github.com/posts/bookrec-how-to-succeed.html</link>
+<link>http://jtdaugherty.github.io/posts/bookrec-how-to-succeed.html</link>
 <pubDate>Sat, 26 Jan 2013 00:00:00 UTC</pubDate>
-<guid>http://jtdaugherty.github.com/posts/bookrec-how-to-succeed.html</guid>
+<guid>http://jtdaugherty.github.io/posts/bookrec-how-to-succeed.html</guid>
 </item>
 <item><title>Epimorphisms and Surjectivity</title>
-<link>http://jtdaugherty.github.com/posts/epimorphisms-and-surjectivity.html</link>
+<link>http://jtdaugherty.github.io/posts/epimorphisms-and-surjectivity.html</link>
 <pubDate>Fri, 24 Feb 2012 00:00:00 UTC</pubDate>
-<guid>http://jtdaugherty.github.com/posts/epimorphisms-and-surjectivity.html</guid>
+<guid>http://jtdaugherty.github.io/posts/epimorphisms-and-surjectivity.html</guid>
 </item>
 <item><title>Continuous Functions</title>
-<link>http://jtdaugherty.github.com/posts/continuous-functions.html</link>
+<link>http://jtdaugherty.github.io/posts/continuous-functions.html</link>
 <pubDate>Sat, 18 Feb 2012 00:00:00 UTC</pubDate>
-<guid>http://jtdaugherty.github.com/posts/continuous-functions.html</guid>
+<guid>http://jtdaugherty.github.io/posts/continuous-functions.html</guid>
 </item>
 <item><title>Proofs in Mathematics</title>
-<link>http://jtdaugherty.github.com/posts/proofs-in-mathematics.html</link>
+<link>http://jtdaugherty.github.io/posts/proofs-in-mathematics.html</link>
 <pubDate>Sun, 15 Aug 2010 00:00:00 UTC</pubDate>
-<guid>http://jtdaugherty.github.com/posts/proofs-in-mathematics.html</guid>
+<guid>http://jtdaugherty.github.io/posts/proofs-in-mathematics.html</guid>
 </item>
 <item><title>Introduction</title>
-<link>http://jtdaugherty.github.com/posts/introduction.html</link>
+<link>http://jtdaugherty.github.io/posts/introduction.html</link>
 <pubDate>Fri,  6 Aug 2010 00:00:00 UTC</pubDate>
-<guid>http://jtdaugherty.github.com/posts/introduction.html</guid>
+<guid>http://jtdaugherty.github.io/posts/introduction.html</guid>
 </item>
 
   </channel>
