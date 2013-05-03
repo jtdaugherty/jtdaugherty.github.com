@@ -65,12 +65,12 @@ MathJax.Hub.Config(
 </blockquote>
 <p>I'm currently working through some exercises in <a href="http://www.ams.org/bookstore-getitem/item=GSM-104">Paolo Aluffi's text, <em>Algebra: Chapter 0</em></a>, and I've come to an exercise asking for a proof of the following:</p>
 <blockquote>
-<p>A function \(f\) is surjective if and only if it is an epimorphism.</p>
+<p>A function <span class="math">\(f\)</span> is surjective if and only if it is an epimorphism.</p>
 </blockquote>
 <p>For context, here is the accompanying definition of <em>epimorphism</em>:</p>
 <blockquote>
-<p>A function \(f:A \to B\) is an <em>epimorphism</em> if for all sets \(Z\) and all functions \(a_1, a_2 : B \to Z\), \[a_1 \circ f = a_2 \circ f
-\implies a_1 = a_2.\]</p>
+<p>A function <span class="math">\(f:A \to B\)</span> is an <em>epimorphism</em> if for all sets <span class="math">\(Z\)</span> and all functions <span class="math">\(a_1, a_2 : B \to Z\)</span>, <span class="math">\[a_1 \circ f = a_2 \circ f
+\implies a_1 = a_2.\]</span></p>
 </blockquote>
 <p>This proof necessarily has two parts, one for each direction of the &quot;iff&quot;. In this post I'm going to try to work out and show the two sides to the proof.</p>
 <h2 id="part-one">Part One</h2>
@@ -78,24 +78,24 @@ MathJax.Hub.Config(
 <p>Show that if a function is surjective, then it is an epimorphism.</p>
 </blockquote>
 <p>I found this part of the proof to be pretty straightforward, in part because it is so similar to the analogous proof for monomorphisms.</p>
-<p>Let \(f: A \to B\) be a surjective function. Choose \(a_1, a_2: B \to Z\) such that</p>
-<p>\[a_1 \circ f = a_2 \circ f \implies a_1 = a_2.\]</p>
-<p>Since \(f\) is surjective, it has a right-inverse \(g : B \to A\) such that \(f \circ g = \textrm{id}_B\). We can apply \(f\)'s right-inverse on both sides:</p>
-<p>\[(a_1 \circ f) \circ g = (a_2 \circ f) \circ g.\]</p>
-<p>By associativity of \(\circ\) we have</p>
-<p>\[a_1 \circ (f \circ g) = a_2 \circ (f \circ g).\]</p>
-<p>By simplification of \(f \circ g\) we have</p>
-<p>\[a_1 \circ \textrm{id}_B = a_2 \circ \textrm{id}_B\]</p>
+<p>Let <span class="math">\(f: A \to B\)</span> be a surjective function. Choose <span class="math">\(a_1, a_2: B \to Z\)</span> such that</p>
+<p><span class="math">\[a_1 \circ f = a_2 \circ f \implies a_1 = a_2.\]</span></p>
+<p>Since <span class="math">\(f\)</span> is surjective, it has a right-inverse <span class="math">\(g : B \to A\)</span> such that <span class="math">\(f \circ g = \textrm{id}_B\)</span>. We can apply <span class="math">\(f\)</span>'s right-inverse on both sides:</p>
+<p><span class="math">\[(a_1 \circ f) \circ g = (a_2 \circ f) \circ g.\]</span></p>
+<p>By associativity of <span class="math">\(\circ\)</span> we have</p>
+<p><span class="math">\[a_1 \circ (f \circ g) = a_2 \circ (f \circ g).\]</span></p>
+<p>By simplification of <span class="math">\(f \circ g\)</span> we have</p>
+<p><span class="math">\[a_1 \circ \textrm{id}_B = a_2 \circ \textrm{id}_B\]</span></p>
 <p>so</p>
-<p>\[a_1 = a_2.\]</p>
-<p>So \(f\) is an epimorphism by the definition.</p>
+<p><span class="math">\[a_1 = a_2.\]</span></p>
+<p>So <span class="math">\(f\)</span> is an epimorphism by the definition.</p>
 <h2 id="part-two">Part Two</h2>
 <blockquote>
 <p>Show that if a function is an epimorphism, then it is surjective.</p>
 </blockquote>
-<p>If \(f: A \to B\) is an epimorphism, then by the above definition we can choose two functions \(a_1, a_2 : B \to Z\) as described above such that</p>
-<p>\[a_1 \circ f = a_2 \circ f \implies a_1 = a_2.\]</p>
-<p>Now assume that \(f\) is not surjective. Then there is some \(b \in B\) such that \(b \notin \textrm{im} f\). If so, it's possible that \(a_1(b) \neq a_2(b)\) so the implication that \(a_1 = a_2\) does not hold. Therefore, for the implication to hold, \(f\) must be surjective.</p>
+<p>If <span class="math">\(f: A \to B\)</span> is an epimorphism, then by the above definition we can choose two functions <span class="math">\(a_1, a_2 : B \to Z\)</span> as described above such that</p>
+<p><span class="math">\[a_1 \circ f = a_2 \circ f \implies a_1 = a_2.\]</span></p>
+<p>Now assume that <span class="math">\(f\)</span> is not surjective. Then there is some <span class="math">\(b \in B\)</span> such that <span class="math">\(b \notin \textrm{im} f\)</span>. If so, it's possible that <span class="math">\(a_1(b) \neq a_2(b)\)</span> so the implication that <span class="math">\(a_1 = a_2\)</span> does not hold. Therefore, for the implication to hold, <span class="math">\(f\)</span> must be surjective.</p>
 <p>Thanks to Jason Dagit for tons of help!</p>
 </div>
 <div id="disqus_thread"></div>

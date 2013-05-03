@@ -68,40 +68,40 @@ MathJax.Hub.Config(
 <blockquote>
 <p>Linear algebra is the study of systems of linear equations and vector spaces. I'll be writing a series of posts on this topic as I progress through my study of it. This first post introduces some foundational ideas about <strong>vectors</strong>.</p>
 </blockquote>
-<p><img src="/generated-images/tikz-0a60ba5a8e5f3125d6a6202ea5195d616d04db20.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-aa644f05a7e5095f66a7c9d5843992a568a6ce8b.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-d6c93f1c0242f2726ac637494bdc0961addaa545.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-c6053aecf6c6df968b9f0f415952e2e0e1758887.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-b811f9ff3450dddc17b887c8d2e166db9fa9bafd.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-ea71e80a247c58c8ad8ddabeee5be9fe0c8325ed.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-d31e829ef2905c1fe8088ab8274f1e217f273cfe.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-0a60ba5a8e5f3125d6a6202ea5195d616d04db20.png" width="236" height="289" class="eq-right"></p>
+<p><img src="/generated-images/tikz-aa644f05a7e5095f66a7c9d5843992a568a6ce8b.png" width="250" height="263" class="eq-right"></p>
+<p><img src="/generated-images/tikz-d6c93f1c0242f2726ac637494bdc0961addaa545.png" width="226" height="252" class="eq-right"></p>
+<p><img src="/generated-images/tikz-c6053aecf6c6df968b9f0f415952e2e0e1758887.png" width="236" height="263" class="eq-right"></p>
+<p><img src="/generated-images/tikz-b811f9ff3450dddc17b887c8d2e166db9fa9bafd.png" width="285" height="318" class="eq-right"></p>
+<p><img src="/generated-images/tikz-ea71e80a247c58c8ad8ddabeee5be9fe0c8325ed.png" width="298" height="312" class="eq-right"></p>
+<p><img src="/generated-images/tikz-d31e829ef2905c1fe8088ab8274f1e217f273cfe.png" width="285" height="312" class="eq-right"></p>
 <p>A <strong>vector</strong> is a sequence of values. The values in the vector's sequence are called its <strong>components</strong>. In these blog posts we'll be concerned with vectors with 2 or 3 components.</p>
-<p>Notationally, a vector with \(n\) components is represented as an \(n\)-row, one-column matrix. The vector is given a bold single-letter name such as \(\uu\) or \(\vv\). Some example vectors are:</p>
-<p>\[
+<p>Notationally, a vector with <span class="math">\(n\)</span> components is represented as an <span class="math">\(n\)</span>-row, one-column matrix. The vector is given a bold single-letter name such as <span class="math">\(\uu\)</span> or <span class="math">\(\vv\)</span>. Some example vectors are:</p>
+<p><span class="math">\[
 \uu = \vxy 2 7 ~~~~
 \vv = \vxyz 1 3 {-2}
-\]</p>
-<p>We refer to the \(i\)th component of a vector \(\uu\) as \(\uu_i\); using the above vectors as examples, \(\uu_2 = 7\) and \(\vv_3 = -2\).</p>
+\]</span></p>
+<p>We refer to the <span class="math">\(i\)</span>th component of a vector <span class="math">\(\uu\)</span> as <span class="math">\(\uu_i\)</span>; using the above vectors as examples, <span class="math">\(\uu_2 = 7\)</span> and <span class="math">\(\vv_3 = -2\)</span>.</p>
 <h2 id="vector-operations">Vector operations</h2>
 <p>Vectors can be added or subtracted by adding or subtracting their respective elements.</p>
-<p>\[
+<p><span class="math">\[
 \uu = \vxy 1 7 ~~~~
 \vv = \vxy 3 5 ~~~~
 \uu - \vv = \vxy {1 - 3} {7 - 5} = \vxy {-2} {2} ~~~~
 \uu + \vv = \vxy {1 + 3} {7 + 5} = \vxy {4} {12}
-\]</p>
-<p>In general, for two \(n\)-dimensional vectors \(\uu\) and \(\vv\),</p>
-<p>\[
+\]</span></p>
+<p>In general, for two <span class="math">\(n\)</span>-dimensional vectors <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span>,</p>
+<p><span class="math">\[
 \uu - \vv = \vxyz {\uu_1 - \vv_1} {\vdots} {\uu_n - \vv_n} ~~~~
 \uu + \vv = \vxyz {\uu_1 + \vv_1} {\vdots} {\uu_n + \vv_n}.
-\]</p>
-<p>Vectors can be multiplied by a number, called a <strong>scalar</strong>, which <em>scales</em> the vector's components as well as its magnitude. We write scalar multiplication as, e.g., \(2\vv\).</p>
-<p>\[
+\]</span></p>
+<p>Vectors can be multiplied by a number, called a <strong>scalar</strong>, which <em>scales</em> the vector's components as well as its magnitude. We write scalar multiplication as, e.g., <span class="math">\(2\vv\)</span>.</p>
+<p><span class="math">\[
 \vv = \vxy 2 5 ~~~~
 2\vv = \vxy 4 {10}
-\]</p>
-<p>To see how the scalar affects the magnitude, we can work it out in algebra. Given \(\vv = \vxy 2 3\) and some scalar \(c\):</p>
-<p>\[
+\]</span></p>
+<p>To see how the scalar affects the magnitude, we can work it out in algebra. Given <span class="math">\(\vv = \vxy 2 3\)</span> and some scalar <span class="math">\(c\)</span>:</p>
+<p><span class="math">\[
 \begin{align*}
 c\vv &amp;= c \vxy 2 3 \\
 &amp;= \vxy {2c} {3c} \\
@@ -110,32 +110,32 @@ c\vv &amp;= c \vxy 2 3 \\
 &amp;= c \sqrt{2^2 + 3^2} \\
 &amp;= c\|\vv\|.
 \end{align*}
-\]</p>
+\]</span></p>
 <h2 id="geometry-of-a-single-vector">Geometry of a Single Vector</h2>
-<p>Typically vectors are represented like the one pictured in Figure 1. Given this geometric representation, a vector can be said to have a <em>direction</em> (which way it points) and a <em>magnitude</em> (its length). The vector's components \(\uu_1\) and \(\uu_2\) correspond to the \(x\) and \(y\) values coinciding with the endpoint of the vector.</p>
-<p>Another way to think about the geometry of vectors is to realize that <em>every vector corresponds to a right triangle</em> (see Figure 2). As a result, we already know the length of the vector from the Pythagorean Theorem. We write this value, the <em>length</em> or <em>magnitude</em> of the vector \(\uu\), as \(\|\uu\|\).</p>
-<p>\[
+<p>Typically vectors are represented like the one pictured in Figure 1. Given this geometric representation, a vector can be said to have a <em>direction</em> (which way it points) and a <em>magnitude</em> (its length). The vector's components <span class="math">\(\uu_1\)</span> and <span class="math">\(\uu_2\)</span> correspond to the <span class="math">\(x\)</span> and <span class="math">\(y\)</span> values coinciding with the endpoint of the vector.</p>
+<p>Another way to think about the geometry of vectors is to realize that <em>every vector corresponds to a right triangle</em> (see Figure 2). As a result, we already know the length of the vector from the Pythagorean Theorem. We write this value, the <em>length</em> or <em>magnitude</em> of the vector <span class="math">\(\uu\)</span>, as <span class="math">\(\|\uu\|\)</span>.</p>
+<p><span class="math">\[
 \uu = \vxy 2 1 ~~~~
 \|\uu\| = \sqrt{2^2 + 1^2} = \sqrt{5}
-\]</p>
-<p>What if the length of some vector \(\uu\) is \(1\)? This is called a <strong>unit vector</strong>, which I'll write as \(\uuu\) (pronounced &quot;you-hat&quot;). A unit vector can be seen in the radius of the unit circle where it is distanced from the \(x\) axis by some angle \(\theta\) (see Figure 3). Since the vector represents a right triangle, the vector's components are the side lengths. If a radius vector \(\uu\) is \(\theta\) degrees from the \(x\) axis, then we can easily compute the angle \(\theta\):</p>
-<p>\[
+\]</span></p>
+<p>What if the length of some vector <span class="math">\(\uu\)</span> is <span class="math">\(1\)</span>? This is called a <strong>unit vector</strong>, which I'll write as <span class="math">\(\uuu\)</span> (pronounced &quot;you-hat&quot;). A unit vector can be seen in the radius of the unit circle where it is distanced from the <span class="math">\(x\)</span> axis by some angle <span class="math">\(\theta\)</span> (see Figure 3). Since the vector represents a right triangle, the vector's components are the side lengths. If a radius vector <span class="math">\(\uu\)</span> is <span class="math">\(\theta\)</span> degrees from the <span class="math">\(x\)</span> axis, then we can easily compute the angle <span class="math">\(\theta\)</span>:</p>
+<p><span class="math">\[
 \uuu = \vxy {\cos \theta} {\sin \theta} ~~~~
 \theta = \cos^{-1} \uuu_1.
-\]</p>
-<p>What if the length of a vector \(\uu\) is greater than \(1\)? How can we determine the angle between \(\uu\) and the \(x\) axis? Well, it would be easy to know \(\theta\) if we had a unit vector. To get a unit vector from \(\uu\), we can scale it so that its length is \(1\). To do that, we divide its components by its length:</p>
-<p>\[
+\]</span></p>
+<p>What if the length of a vector <span class="math">\(\uu\)</span> is greater than <span class="math">\(1\)</span>? How can we determine the angle between <span class="math">\(\uu\)</span> and the <span class="math">\(x\)</span> axis? Well, it would be easy to know <span class="math">\(\theta\)</span> if we had a unit vector. To get a unit vector from <span class="math">\(\uu\)</span>, we can scale it so that its length is <span class="math">\(1\)</span>. To do that, we divide its components by its length:</p>
+<p><span class="math">\[
 \uu = \vxy {4} {3} ~~~~
 \uuu = \frac{\uu}{\|\uu\|} = \vxy {\frac 4 5} {\frac 3 5} ~~~~
 \|\uuu\| = \sqrt{\left(\frac 4 5\right)^2 + \left(\frac 3 5\right)^2} = 1.
-\]</p>
-<p>What happens when we multiply a vector \(\uu\) times a negative scalar, such as \(-2\uu\)? If the scalar is negative, the resulting vector <em>points in exactly the opposite direction</em> (see Figure 4). If the scalar is not equal to \(-1\), the vector's magnitude is scaled, as well.</p>
+\]</span></p>
+<p>What happens when we multiply a vector <span class="math">\(\uu\)</span> times a negative scalar, such as <span class="math">\(-2\uu\)</span>? If the scalar is negative, the resulting vector <em>points in exactly the opposite direction</em> (see Figure 4). If the scalar is not equal to <span class="math">\(-1\)</span>, the vector's magnitude is scaled, as well.</p>
 <h2 id="geometry-of-multiple-vectors">Geometry of Multiple Vectors</h2>
 <p>Now we get into something more interesting: the geometric representation of what happens when we add or subtract vectors.</p>
-<p>Figure 5 shows an example of two vectors and their sum. The geometry of the sum vector follows from the definition of vector addition: we added the \(x\) components of the vectors to get the new \(x\) component, and similarly for \(y\).</p>
-<p>In fact, if we were to attach \(\uu\) and \(\vv\) in a &quot;head-to-tail&quot; fashion so that \(\vv\) starts where \(\uu\) ends, then the resulting &quot;chain&quot; of vectors would end up in the same place as \(\uu + \vv\) (see Figure 6).</p>
-<p>Now you can see that the vectors \(\uu\) and \(\vv\) in Figure 6 <em>form a parallelogram</em>. Their sum, \(\uu + \vv\), forms one diagonal of this parallelogram.</p>
-<p>The other diagonal of the parallelogram -- connecting the ends of \(\uu\) and \(\vv\) -- is represented by the subtraction of one vector from the other (see Figure 7). Note that we are making a statement <em>only</em> about the <em>length</em> of the difference vector \(\uu - \vv\); it does not <em>originate</em> from the end of \(\vv\), but from the origin as all vectors do. But we present it this way to illustrate its relationship to the other vector operations. The emphasis here is on the relationships between the magnitudes and directions of the various vectors involved.</p>
+<p>Figure 5 shows an example of two vectors and their sum. The geometry of the sum vector follows from the definition of vector addition: we added the <span class="math">\(x\)</span> components of the vectors to get the new <span class="math">\(x\)</span> component, and similarly for <span class="math">\(y\)</span>.</p>
+<p>In fact, if we were to attach <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> in a &quot;head-to-tail&quot; fashion so that <span class="math">\(\vv\)</span> starts where <span class="math">\(\uu\)</span> ends, then the resulting &quot;chain&quot; of vectors would end up in the same place as <span class="math">\(\uu + \vv\)</span> (see Figure 6).</p>
+<p>Now you can see that the vectors <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> in Figure 6 <em>form a parallelogram</em>. Their sum, <span class="math">\(\uu + \vv\)</span>, forms one diagonal of this parallelogram.</p>
+<p>The other diagonal of the parallelogram -- connecting the ends of <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> -- is represented by the subtraction of one vector from the other (see Figure 7). Note that we are making a statement <em>only</em> about the <em>length</em> of the difference vector <span class="math">\(\uu - \vv\)</span>; it does not <em>originate</em> from the end of <span class="math">\(\vv\)</span>, but from the origin as all vectors do. But we present it this way to illustrate its relationship to the other vector operations. The emphasis here is on the relationships between the magnitudes and directions of the various vectors involved.</p>
 <h2 id="up-next">Up Next</h2>
 <p>In the next post in this series, I'll cover dot products, the cosine rule, and the Schwarz and Triangle inequalities.</p>
 </div>

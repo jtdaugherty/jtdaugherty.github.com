@@ -73,50 +73,50 @@ MathJax.Hub.Config(
 <blockquote>
 <p>In this post we'll look at linear combinations and how they relate to matrix notation and systems of linear equations.</p>
 </blockquote>
-<p><img src="/generated-images/tikz-0781b3210790e594d827f2e0f4bc3eb2eb455d98.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-0781b3210790e594d827f2e0f4bc3eb2eb455d98.png" width="273" height="288" class="eq-right"></p>
 <h2 id="linear-combinations">Linear Combinations</h2>
-<p>In <a href="/posts/linear-algebra-1.html">Part 1</a> and <a href="/posts/linear-algebra-2.html">Part 2</a> we introduced vectors and dot products. We saw that we can think of the vector sum \(\uu + \vv\) as following a path along \(\uu\) and then \(\vv\) to reach the same location as the vector \(\uu + \vv\). Another way to look at \(\uu + \vv\) is as a <em>combination</em> of the vectors \(\uu\) and \(\vv\), with each weighted equally:</p>
-<p>\[
+<p>In <a href="/posts/linear-algebra-1.html">Part 1</a> and <a href="/posts/linear-algebra-2.html">Part 2</a> we introduced vectors and dot products. We saw that we can think of the vector sum <span class="math">\(\uu + \vv\)</span> as following a path along <span class="math">\(\uu\)</span> and then <span class="math">\(\vv\)</span> to reach the same location as the vector <span class="math">\(\uu + \vv\)</span>. Another way to look at <span class="math">\(\uu + \vv\)</span> is as a <em>combination</em> of the vectors <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span>, with each weighted equally:</p>
+<p><span class="math">\[
 \uu + \vv = (1)\uu + (1)\vv
-\]</p>
-<p>We could choose to combine them with each vector weighted differently to reach different destination vectors, as in \(2\uu + \vv\) and \(-\frac{1}{2}\uu + \vv\) (see Figure 1). Any such combination of the vectors \(\uu\) and \(\vv\) is called a <strong>linear combination</strong> of \(\uu\) and \(\vv\). A linear combination of values \(x_i\) (in this case, vectors) with coefficients \(a_i\) has the general form</p>
-<p>\[
+\]</span></p>
+<p>We could choose to combine them with each vector weighted differently to reach different destination vectors, as in <span class="math">\(2\uu + \vv\)</span> and <span class="math">\(-\frac{1}{2}\uu + \vv\)</span> (see Figure 1). Any such combination of the vectors <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> is called a <strong>linear combination</strong> of <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span>. A linear combination of values <span class="math">\(x_i\)</span> (in this case, vectors) with coefficients <span class="math">\(a_i\)</span> has the general form</p>
+<p><span class="math">\[
 a_1x_1 + a_2x_2 + \cdots + a_nx_n.
-\]</p>
-<p>We can think of this as <em>combining</em> the values \(x_i\) using the coefficients \(a_i\) to choose how much of each component will make it into the result.</p>
+\]</span></p>
+<p>We can think of this as <em>combining</em> the values <span class="math">\(x_i\)</span> using the coefficients <span class="math">\(a_i\)</span> to choose how much of each component will make it into the result.</p>
 <p>Here are some examples of linear combinations:</p>
-<p>\[
+<p><span class="math">\[
 \begin{array}{ll}
 \text{Dot Product} &amp; \dotp{\uu}{\vv} = \uu_1\vv_1 + \uu_2\vv_2 + \cdots + \uu_n\vv_n \\
 \text{Linear equation} &amp; 2x + y - z = 4
 \end{array}
-\]</p>
+\]</span></p>
 <p>Linear combinations are more interesting when we combine whole vectors. For example, consider the following linear combination:</p>
-<p>\[
+<p><span class="math">\[
 2\vxy{3}{4} + 8\vxy{1}{7} - 3\vxy{3}{0} = \vxy{5}{56}
-\]</p>
-<p>The resulting vector is a combination of the vectors \(\sm{3\\4}\), \(\sm{1\\7}\), and \(\sm{3\\0}\). The combination weights each vector by a scalar amount; in this case the scalars are \(2\), \(8\), and \(-3\), respectively.</p>
-<p>The above example can be rewritten as a pair of dot products, with the rows from the combined vectors forming dot products with the vector \(\rxyz{2}{8}{-3}\), as in</p>
-<p>\[
+\]</span></p>
+<p>The resulting vector is a combination of the vectors <span class="math">\(\sm{3\\4}\)</span>, <span class="math">\(\sm{1\\7}\)</span>, and <span class="math">\(\sm{3\\0}\)</span>. The combination weights each vector by a scalar amount; in this case the scalars are <span class="math">\(2\)</span>, <span class="math">\(8\)</span>, and <span class="math">\(-3\)</span>, respectively.</p>
+<p>The above example can be rewritten as a pair of dot products, with the rows from the combined vectors forming dot products with the vector <span class="math">\(\rxyz{2}{8}{-3}\)</span>, as in</p>
+<p><span class="math">\[
 \dotp{\rxyz{3}{1}{3}}{\rxyz{2}{8}{-3}} = 5 \\
 \dotp{\rxyz{4}{7}{0}}{\rxyz{2}{8}{-3}} = 56
-\]</p>
+\]</span></p>
 <p>We might as well factor out the right hand side of the dot products since they are the same for each &quot;row&quot; vector. So we rewrite this as:</p>
-<p>\[
+<p><span class="math">\[
 \begin{bmatrix}
 3 &amp; 1 &amp; 3 \\
 4 &amp; 7 &amp; 0
 \end{bmatrix}
 \vxyz{2}{8}{-3} = \vxy{5}{56}
-\]</p>
-<p>We have written the original vectors in <strong>matrix notation</strong> and the left hand side of the above equation represents a matrix multiplied times a vector. This is just shorthand for the expanded dot product version we saw above. The way to read this is, &quot;combine the vectors by taking \(2\) times the first plus \(8\) times the second plus \(-3\) times the third.&quot;</p>
+\]</span></p>
+<p>We have written the original vectors in <strong>matrix notation</strong> and the left hand side of the above equation represents a matrix multiplied times a vector. This is just shorthand for the expanded dot product version we saw above. The way to read this is, &quot;combine the vectors by taking <span class="math">\(2\)</span> times the first plus <span class="math">\(8\)</span> times the second plus <span class="math">\(-3\)</span> times the third.&quot;</p>
 <h2 id="systems-of-linear-equations">Systems of Linear Equations</h2>
 <p>So far we have been dealing only with vectors, but linear algebra is all about <em>linear equations</em>: equations which describe <em>linear</em> structures in any number of dimensions. An equation with two unknowns like</p>
-<p>\[
+<p><span class="math">\[
 x + 2y = 3
-\]</p>
-<p>describes a line in two dimensions. (You may know it better in the form \(y = mx + b\), i.e., \(y = -\frac{1}{2}x + \frac{3}{2}\), where \(m\) typically represents the slope of the line and \(b\) represents the \(y\)-intercept.) The concept extends to an arbitrary number of dimensions; here are some examples:</p>
-<p>\[
+\]</span></p>
+<p>describes a line in two dimensions. (You may know it better in the form <span class="math">\(y = mx + b\)</span>, i.e., <span class="math">\(y = -\frac{1}{2}x + \frac{3}{2}\)</span>, where <span class="math">\(m\)</span> typically represents the slope of the line and <span class="math">\(b\)</span> represents the <span class="math">\(y\)</span>-intercept.) The concept extends to an arbitrary number of dimensions; here are some examples:</p>
+<p><span class="math">\[
 \begin{array}{|rcl|c|c|}
 \hline \\
 \text{Equation} &amp; &amp; &amp; \text{Structure} &amp; \text{Dimensions} \\\hline
@@ -127,27 +127,27 @@ ax + by + cz + dt &amp; = &amp; e &amp; \text{hyperplane} &amp; 4 \\
 &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\
 \hline
 \end{array}
-\]</p>
+\]</span></p>
 <p>The central motivating problem of linear algebra is to find a solution to a <strong>system of linear equations</strong>. A <em>system</em> of equations is a set of equations about a set of <em>common</em> unknowns. If we tried to put together a sensible system of equations relating the popularity of a movie over time with the price of potatoes, we would probably have trouble. But if we tried to construct a system of equations relating the position of two moving trains over time, that might make more sense.</p>
-<p><img src="/generated-images/tikz-d2429c9fdc36fa7022ee45704473b6477d890949.png" class="eq-right"></p>
+<p><img src="/generated-images/tikz-d2429c9fdc36fa7022ee45704473b6477d890949.png" width="261" height="339" class="eq-right"></p>
 <p>The following is <em>not</em> a system of equations since it does not use the same unknowns in each equation:</p>
-<p>\[
+<p><span class="math">\[
 \begin{align*}
 2x + y &amp;= 4 \\
 t + z &amp;= 0
 \end{align*}
-\]</p>
+\]</span></p>
 <p>However, the following example <em>is</em> a valid system of equations:</p>
-<p>\[
+<p><span class="math">\[
 \begin{align*}
 x + 2y &amp;= 3 \\
 -x + y &amp;= 0
 \end{align*}
-\]</p>
+\]</span></p>
 <p>For such a system, the question that linear algebra allows us to answer is: &quot;Is there a solution to the system?&quot; That is, are there values of the unknowns which simultaneously solve all equations in the system? (See Figure 2.)</p>
-<p>If we think of this geometrically, the equations above represent lines in two dimensions. If there is a solution to the system, then there are values \(x\) and \(y\) which solve both equations simultaneously. But if such values exist, that means that if we were to draw the lines, they would <em>intersect</em>, since for both lines the same \(x\) yields the same \(y\). This is the requirement of a system solution: that the lines, planes, etc., <em>intersect</em> at a <em>single point</em>. The system can't intersect at more than one point unless all of the equations in the system represent the <em>same line</em>, in which case that is not a very useful result. The other possibility is that they do not intersect at all.</p>
+<p>If we think of this geometrically, the equations above represent lines in two dimensions. If there is a solution to the system, then there are values <span class="math">\(x\)</span> and <span class="math">\(y\)</span> which solve both equations simultaneously. But if such values exist, that means that if we were to draw the lines, they would <em>intersect</em>, since for both lines the same <span class="math">\(x\)</span> yields the same <span class="math">\(y\)</span>. This is the requirement of a system solution: that the lines, planes, etc., <em>intersect</em> at a <em>single point</em>. The system can't intersect at more than one point unless all of the equations in the system represent the <em>same line</em>, in which case that is not a very useful result. The other possibility is that they do not intersect at all.</p>
 <p>When we are dealing with systems of equations, instead of writing them as we did above (with all of the uknowns mentioned in each term) we factor those unknowns out and write the system as a product of the coefficient matrix and the vector of unknowns. The following three forms are equivalent:</p>
-<p>\[
+<p><span class="math">\[
 \begin{array}{lcccr}
   \begin{bmatrix}
     1 &amp; 2 \\
@@ -165,21 +165,21 @@ x + 2y &amp;= 3 \\
     -x + y &amp;= 0
   \end{align*}
 \end{array}
-\]</p>
-<p><img src="/generated-images/tikz-fd603d2b64326a96a24f9dbd692037c7bcbac9c4.png" class="eq-right"></p>
+\]</span></p>
+<p><img src="/generated-images/tikz-fd603d2b64326a96a24f9dbd692037c7bcbac9c4.png" width="292" height="285" class="eq-right"></p>
 <p>Now we can look at the first form in two ways: as a series of dot products with the vector of unknowns, or as a combination of the coefficient matrix column vectors, i.e.,</p>
-<p>\[
+<p><span class="math">\[
 x\vxy{1}{-1} + y\vxy{2}{1} = \vxy{3}{0}.
-\]</p>
-<p>The question posed here is: is there some combination of the vectors which yields \(\sm{3\\0}\)? Figure 3 shows the answer: there is such a combination, obtained by taking one of each, so the solution to the system is \(\sm{1\\1}\). Then we have</p>
-<p>\[
+\]</span></p>
+<p>The question posed here is: is there some combination of the vectors which yields <span class="math">\(\sm{3\\0}\)</span>? Figure 3 shows the answer: there is such a combination, obtained by taking one of each, so the solution to the system is <span class="math">\(\sm{1\\1}\)</span>. Then we have</p>
+<p><span class="math">\[
 \begin{bmatrix}
   1 &amp; 2 \\
   -1 &amp; 1
 \end{bmatrix}
 \vxy{1}{1} = \vxy{3}{0}
-\]</p>
-<p>which checks out: the first vector plus the second equals the third. The solution vector tells us how to combine the coefficient vectors and it also tells us the location of the point \((x,y)\) at which the lines meet.</p>
+\]</span></p>
+<p>which checks out: the first vector plus the second equals the third. The solution vector tells us how to combine the coefficient vectors and it also tells us the location of the point <span class="math">\((x,y)\)</span> at which the lines meet.</p>
 <h2 id="afterword">Afterword</h2>
 <p>Now we've looked at the idea of linear combinations, how systems of equations can be represented in matrix form, and how matrix form has a number of interpretations (dot products, combination of column vectors, and lines). Next time we'll look at elimination, the process of determining whether there is a solution to a linear system and, if so, what it is.</p>
 </div>
