@@ -70,95 +70,95 @@ MathJax.Hub.Config(
 <blockquote>
 <p>In <a href="/posts/linear-algebra-1.html">Part 1 of this series</a>, we looked at vectors along with some tools for reasoning about them in a geometric setting. In this post we'll go forward with a big idea about vectors: the dot product.</p>
 </blockquote>
-<p><img src="/generated-images/tikz-4e98a5c67839c280e09371b7ebaba378ac352d5e.png" class="eq-right"></p>
-<p><img src="/generated-images/tikz-d4c2401b60466deeb44ef92434091fc55ae61343.png" class="eq-right"></p>
+<p><img width="261" height="287" src="/generated-images/tikz-4e98a5c67839c280e09371b7ebaba378ac352d5e.png" class="eq-right"></p>
+<p><img width="261" height="287" src="/generated-images/tikz-d4c2401b60466deeb44ef92434091fc55ae61343.png" class="eq-right"></p>
 <h2 id="motivation">Motivation</h2>
 <p>One thing we want to be able to do when dealing with two vectors is to measure the angle between them. We might use vectors to model light reflectance or moving objects; in these situations we need to be able to compute the angle between the vectors involved.</p>
 <p>We'll start, as pictured in Figure 1, with two unit vectors. The vectors involved are</p>
-<p>\[
+<p><span class="math">\[
 \uu = \vxy{\cos \theta}{\sin \theta} ~~~~
 \vv = \vxy{1}{0}.
-\]</p>
-<p>Just looking at the picture we can tell that the angle between this particular pair of vectors is \(\theta\), which can be obtained by computing \(\cos^{-1}(\cos \theta) = \cos^{-1}{\uu_1}\).</p>
-<p>If, as in Figure 2, \(\uu\) and \(\vv\) were <em>any unit vectors</em>, how would we compute the angle between them? Instead of having one vector <em>on</em> the \(x\) axis to make things simple, these vectors are both rotated through angles \(\alpha\) and \(\beta\), respectively. In that case we have</p>
-<p>\[
+\]</span></p>
+<p>Just looking at the picture we can tell that the angle between this particular pair of vectors is <span class="math">\(\theta\)</span>, which can be obtained by computing <span class="math">\(\cos^{-1}(\cos \theta) = \cos^{-1}{\uu_1}\)</span>.</p>
+<p>If, as in Figure 2, <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> were <em>any unit vectors</em>, how would we compute the angle between them? Instead of having one vector <em>on</em> the <span class="math">\(x\)</span> axis to make things simple, these vectors are both rotated through angles <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span>, respectively. In that case we have</p>
+<p><span class="math">\[
 \vv = \vxy{\cos \alpha}{\sin \alpha} ~~~~
 \uu = \vxy{\cos \beta}{\sin \beta}.
-\]</p>
+\]</span></p>
 <p>It turns out that we can use an identity from trigonometry to deal with this situation:</p>
-<p>\[
+<p><span class="math">\[
 \cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta) = \cos({\beta - \alpha}).
-\]</p>
-<p>This is exactly the angle we're trying to compute: \(\theta = \beta - \alpha\). Given the vectors under consideration, another way to rewrite the above identity in this situation is</p>
-<p>\[
+\]</span></p>
+<p>This is exactly the angle we're trying to compute: <span class="math">\(\theta = \beta - \alpha\)</span>. Given the vectors under consideration, another way to rewrite the above identity in this situation is</p>
+<p><span class="math">\[
 \uu_1\vv_1 + \uu_2\vv_2 = \cos(\theta).
-\]</p>
+\]</span></p>
 <p>So that gives us a general way to find the angle between two <em>unit</em> vectors, regardless of how they are oriented.</p>
-<p>What if \(\uu\) and \(\vv\) aren't unit vectors? We know by now that we can make them unit vectors by dividing them by their lengths. So that gives us the following (notice the transition from unit vectors to the original \(\uu\) and \(\vv\)):</p>
-<p>\[
+<p>What if <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> aren't unit vectors? We know by now that we can make them unit vectors by dividing them by their lengths. So that gives us the following (notice the transition from unit vectors to the original <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span>):</p>
+<p><span class="math">\[
 \begin{align*}
 \cos \theta &amp;= \uuu_1\vvv_1 + \uuu_2\vvv_2 \\
 &amp;= \frac{\uu_1}{\|\uu\|}\frac{\vv_1}{\|\vv\|} + \frac{\uu_2}{\|\uu\|}\frac{\vv_2}{\|\vv\|} \\
 &amp;= \frac{\uu_1\vv_1 + \uu_2\vv_2}{\|\uu\|\|\vv\|}.
 \end{align*}
-\]</p>
+\]</span></p>
 <p>Written another way,</p>
-<p>\[
+<p><span class="math">\[
 \|\uu\|\|\vv\| \cos \theta = \uu_1\vv_1 + \uu_2\vv_2.
-\]</p>
+\]</span></p>
 <p>The right-hand side of the equation is so common that there is a shorthand for it called the <strong>dot product</strong>, written</p>
-<p>\[
+<p><span class="math">\[
 \uu \cdot \vv = \uu_1\vv_1 + \uu_2\vv_2.
-\]</p>
+\]</span></p>
 <p>(In fact, this is just the version for two-element vectors; it applies similarly for vectors in any number of dimensions.)</p>
 <p>So we can rewrite the formula above as</p>
-<p>\[
+<p><span class="math">\[
 \uu \cdot \vv = \|\uu\|\|\vv\| \cos \theta.
-\]</p>
+\]</span></p>
 <p>One way to think about the dot product of two vectors is that <em>it expresses the cosine of the angle between them, scaled by their lengths.</em></p>
 <h2 id="dot-product-properties">Dot Product Properties</h2>
 <p>The dot product has some properties we'll need to rely on soon. They are:</p>
 <ul>
 <li>Commutativity; we get this commutativity &quot;for free&quot; due to the commutativity of multiplication:</li>
 </ul>
-<p>\[
+<p><span class="math">\[
 \begin{align*}
 \uu \cdot \vv &amp;= \vv \cdot \uu \\
 \uu_1\vv_1 + \uu_2\vv_2 &amp;= \vv_1\uu_1 + \vv_2\uu_2.
 \end{align*}
-\]</p>
+\]</span></p>
 <ul>
 <li>Distributivity over vector addition:</li>
 </ul>
-<p>\[
+<p><span class="math">\[
 \begin{align*}
 \uu \cdot (\vv + \ww) &amp;= (\uu \cdot \vv) + (\uu \cdot \ww) \\
 \uu_1(\vv_1 + \ww_1) + \uu_2(\vv_2 + \ww_2) &amp;= \\
 \uu_1\vv_1 + \uu_1\ww_1 + \uu_2\vv_2 + \uu_2\ww_2 &amp;= \uu_1\vv_1 + \uu_2\vv_2 + \uu_1\ww_1 + \uu_2\ww_2 \\
 &amp;= (\uu \cdot \vv) + (\uu \cdot \ww).
 \end{align*}
-\]</p>
+\]</span></p>
 <ul>
 <li>Scalar multiplication:</li>
 </ul>
-<p>\[
+<p><span class="math">\[
 \begin{align*}
 c\uu \cdot \vv &amp;= c(\uu \cdot \vv) \\
 c\uu_1\vv_1 + c\uu_2\vv_2 &amp;= c(\uu_1\vv_1 + \uu_2\vv_2).
 \end{align*}
-\]</p>
-<p><img src="/generated-images/tikz-aa4389c5154ff3218cb3300331ad1bce21edb248.png" class="eq-right"></p>
+\]</span></p>
+<p><img width="275" height="302" src="/generated-images/tikz-aa4389c5154ff3218cb3300331ad1bce21edb248.png" class="eq-right"></p>
 <h2 id="the-schwarz-inequality">The Schwarz Inequality</h2>
-<p>Think back to the two unit vectors in Figure 1. If we start with both of those vectors at \(\sm{1\\0}\) and rotate one of them counter-clockwise around the unit circle, the angle between them will go from \(0\) degrees to \(360\) degrees. At the same time, the cosine of the angle will go from \(1\) to \(-1\) (at \(180\) degress) and back to \(1\) at \(360\) degrees; see Figure 3.</p>
-<p>Given that the dot product is a cosine &quot;scaled&quot; by the length of the vectors \(\uu\) and \(\vv\), that means that for any two such vectors, as we let the angle between them range between \(0\) and \(360\) degrees, the dot product will range between \((1)\|\uu\|\|\vv\| \dots (-1)\|\uu\|\|\vv\|\) and back:</p>
+<p>Think back to the two unit vectors in Figure 1. If we start with both of those vectors at <span class="math">\(\sm{1\\0}\)</span> and rotate one of them counter-clockwise around the unit circle, the angle between them will go from <span class="math">\(0\)</span> degrees to <span class="math">\(360\)</span> degrees. At the same time, the cosine of the angle will go from <span class="math">\(1\)</span> to <span class="math">\(-1\)</span> (at <span class="math">\(180\)</span> degress) and back to <span class="math">\(1\)</span> at <span class="math">\(360\)</span> degrees; see Figure 3.</p>
+<p>Given that the dot product is a cosine &quot;scaled&quot; by the length of the vectors <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span>, that means that for any two such vectors, as we let the angle between them range between <span class="math">\(0\)</span> and <span class="math">\(360\)</span> degrees, the dot product will range between <span class="math">\((1)\|\uu\|\|\vv\| \dots (-1)\|\uu\|\|\vv\|\)</span> and back:</p>
 <ul>
-<li>it will be \((1)\|\uu\|\|\vv\|\) if \(\uu\) and \(\vv\) point in the same direction, i.e. if the angle between them is \(0\) degrees;</li>
-<li>it will be \((-1)\|\uu\|\|\vv\|\) if they point in opposite directions, i.e., if the angle is \(180\) degrees.</li>
+<li>it will be <span class="math">\((1)\|\uu\|\|\vv\|\)</span> if <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> point in the same direction, i.e. if the angle between them is <span class="math">\(0\)</span> degrees;</li>
+<li>it will be <span class="math">\((-1)\|\uu\|\|\vv\|\)</span> if they point in opposite directions, i.e., if the angle is <span class="math">\(180\)</span> degrees.</li>
 </ul>
-<p>See Figure 4 for the behavior of \(\uu \cdot \vv\) where, say, \(\|\uu\| = 3\) and \(\|\vv\| = 1\).</p>
-<p><img src="/generated-images/tikz-816721ce5dd50000c2d396844fe0c93fdae4d949.png" class="eq-right"></p>
-<p>When does the dot product equal zero? Exactly when the angle is \(90\) degrees, i.e., when the cosine equals zero (see Figure 4). To see exactly why this happens, <em>assume</em> that two vectors \(\uu\) and \(\vv\) are perpendicular. Then we know that they can be arranged in a right triangle so we can express them in terms of the Pythagorean Theorem. Given that (for any vector \(\vv\)) \(\|\vv\|^2 = \vv \cdot \vv\) and given the properties of the dot product discussed above,</p>
-<p>\[
+<p>See Figure 4 for the behavior of <span class="math">\(\uu \cdot \vv\)</span> where, say, <span class="math">\(\|\uu\| = 3\)</span> and <span class="math">\(\|\vv\| = 1\)</span>.</p>
+<p><img width="301" height="361" src="/generated-images/tikz-816721ce5dd50000c2d396844fe0c93fdae4d949.png" class="eq-right"></p>
+<p>When does the dot product equal zero? Exactly when the angle is <span class="math">\(90\)</span> degrees, i.e., when the cosine equals zero (see Figure 4). To see exactly why this happens, <em>assume</em> that two vectors <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> are perpendicular. Then we know that they can be arranged in a right triangle so we can express them in terms of the Pythagorean Theorem. Given that (for any vector <span class="math">\(\vv\)</span>) <span class="math">\(\|\vv\|^2 = \vv \cdot \vv\)</span> and given the properties of the dot product discussed above,</p>
+<p><span class="math">\[
 \begin{align*}
 \|\uu - \vv\|^2 &amp;= \|\uu\|^2 + \|\vv\|^2 \\
 (\uu - \vv) \cdot (\uu - \vv) &amp;= (\uu \cdot \uu) + (\vv \cdot \vv) \\
@@ -168,42 +168,42 @@ c\uu_1\vv_1 + c\uu_2\vv_2 &amp;= c(\uu_1\vv_1 + \uu_2\vv_2).
 -2\uu \cdot \vv &amp;= 0 \\
 \uu \cdot \vv &amp;= 0.
 \end{align*}
-\]</p>
+\]</span></p>
 <p>So we get a lot of information from the dot product:</p>
 <ul>
-<li>If \(\uu \cdot \vv = 0\), we know the vectors are perpendicular.</li>
-<li>If \(\uu \cdot \vv &gt; 0\), we know the angle between them is less than 90 degrees.</li>
-<li>If \(\uu \cdot \vv &lt; 0\), we know the angle between them is greater than 90 degrees.</li>
+<li>If <span class="math">\(\uu \cdot \vv = 0\)</span>, we know the vectors are perpendicular.</li>
+<li>If <span class="math">\(\uu \cdot \vv &gt; 0\)</span>, we know the angle between them is less than 90 degrees.</li>
+<li>If <span class="math">\(\uu \cdot \vv &lt; 0\)</span>, we know the angle between them is greater than 90 degrees.</li>
 </ul>
 <p>All of these facts come together in the <em>Schwarz inequality</em> and in Figure 4:</p>
-<p>\[
+<p><span class="math">\[
 \|\uu \cdot \vv\| \le \|\uu\|\|\vv\|.
-\]</p>
-<p>This captures the idea that the dot product of two vectors oscillates between \(1\) and \(-1\), scaled by their lengths.</p>
+\]</span></p>
+<p>This captures the idea that the dot product of two vectors oscillates between <span class="math">\(1\)</span> and <span class="math">\(-1\)</span>, scaled by their lengths.</p>
 <h2 id="the-law-of-cosines">The Law of Cosines</h2>
-<p>The relationship between the dot product and the angle between vectors goes deeper. Given two vectors \(\uu\) and \(\vv\) separated by an angle \(\theta\) as we had above, call the third side of the triangle \(\ww = (\uu - \vv)\). Then we can write the hypotenuse \(\ww\) as</p>
-<p>\[
+<p>The relationship between the dot product and the angle between vectors goes deeper. Given two vectors <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> separated by an angle <span class="math">\(\theta\)</span> as we had above, call the third side of the triangle <span class="math">\(\ww = (\uu - \vv)\)</span>. Then we can write the hypotenuse <span class="math">\(\ww\)</span> as</p>
+<p><span class="math">\[
 \begin{align*}
 \ww \cdot \ww &amp;= (\uu - \vv) \cdot (\uu - \vv) \\
 &amp;= (\uu \cdot (\uu - \vv)) - (\vv \cdot (\uu - \vv)) \\
 &amp;= \uu \cdot \uu - \uu \cdot \vv - \vv \cdot \uu + \vv \cdot \vv \\
 &amp;= \uu \cdot \uu - 2\uu \cdot \vv + \vv \cdot \vv.
 \end{align*}
-\]</p>
-<p>Since we know that \(\uu \cdot \vv = \|\uu\|\|\vv\| \cos \theta\), we can rewrite the last step as</p>
-<p>\[
+\]</span></p>
+<p>Since we know that <span class="math">\(\uu \cdot \vv = \|\uu\|\|\vv\| \cos \theta\)</span>, we can rewrite the last step as</p>
+<p><span class="math">\[
 \|\ww\|^2 = \|\uu\|^2 - 2\|\uu\|\|\vv\| \cos \theta + \|\vv\|^2.
-\]</p>
-<p>which is a generalization of the Pythagorean theorem! Considering the special case of \(\theta = 90^\circ\), then \(\cos \theta = 2\|\uu\|\|\vv\|\cos \theta = 0\), giving the familiar equation</p>
-<p>\[
+\]</span></p>
+<p>which is a generalization of the Pythagorean theorem! Considering the special case of <span class="math">\(\theta = 90^\circ\)</span>, then <span class="math">\(\cos \theta = 2\|\uu\|\|\vv\|\cos \theta = 0\)</span>, giving the familiar equation</p>
+<p><span class="math">\[
 \|\ww\|^2 = \|\uu\|^2 + \|\vv\|^2.
-\]</p>
+\]</span></p>
 <h2 id="the-triangle-inequality">The Triangle Inequality</h2>
 <p>The triangle inequality is a statement of something you've heard before: the shortest path between two points is a straight line between them. But here we state it in terms of vectors:</p>
-<p>\[
+<p><span class="math">\[
 \|\uu + \vv\| \le \|\uu\| + \|\vv\|.
-\]</p>
-<p>In vector terms, a vector to the point \(\uu + \vv\) is always going to be <em>no bigger than</em> the path taken by going along one vector \(\uu\), then along the other vector \(\vv\). The two sides will be equal only when \(\uu\) and \(\vv\) <em>lie in the same line</em>. The sum \(\|\uu\| + \|\vv\|\) will be greater otherwise.</p>
+\]</span></p>
+<p>In vector terms, a vector to the point <span class="math">\(\uu + \vv\)</span> is always going to be <em>no bigger than</em> the path taken by going along one vector <span class="math">\(\uu\)</span>, then along the other vector <span class="math">\(\vv\)</span>. The two sides will be equal only when <span class="math">\(\uu\)</span> and <span class="math">\(\vv\)</span> <em>lie in the same line</em>. The sum <span class="math">\(\|\uu\| + \|\vv\|\)</span> will be greater otherwise.</p>
 <h2 id="afterword">Afterword</h2>
 <p>The vector is the basic building block of geometric intuition about solving systems of linear equations, as we'll see in future posts in this series. This post and <a href="/posts/linear-algebra-1.html">Part 1</a> should give a pretty good foundation.</p>
 </div>
