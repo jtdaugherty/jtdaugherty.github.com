@@ -6,7 +6,12 @@
     <language>en-us</language>
     <managingEditor>drcygnus@gmail.com</managingEditor>
     <webMaster>drcygnus@gmail.com</webMaster>
-    <item><title>Linear Algebra, Part 7: Gauss-Jordan Elimination</title>
+    <item><title>Linear Algebra, Part 8: A=LDU Matrix Factorization</title>
+<link>http://jtdaugherty.github.io/posts/linear-algebra-8.html</link>
+<pubDate>Sat,  8 Mar 2014 00:00:00 UTC</pubDate>
+<guid>http://jtdaugherty.github.io/posts/linear-algebra-8.html</guid>
+</item>
+<item><title>Linear Algebra, Part 7: Gauss-Jordan Elimination</title>
 <link>http://jtdaugherty.github.io/posts/linear-algebra-7.html</link>
 <pubDate>Fri,  7 Mar 2014 00:00:00 UTC</pubDate>
 <guid>http://jtdaugherty.github.io/posts/linear-algebra-7.html</guid>
