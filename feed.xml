@@ -6,7 +6,12 @@
     <language>en-us</language>
     <managingEditor>drcygnus@gmail.com</managingEditor>
     <webMaster>drcygnus@gmail.com</webMaster>
-    <item><title>Linear Algebra, Part 6: Matrix Inverses</title>
+    <item><title>Linear Algebra, Part 7: Gauss-Jordan Elimination</title>
+<link>http://jtdaugherty.github.io/posts/linear-algebra-7.html</link>
+<pubDate>Fri,  7 Mar 2014 00:00:00 UTC</pubDate>
+<guid>http://jtdaugherty.github.io/posts/linear-algebra-7.html</guid>
+</item>
+<item><title>Linear Algebra, Part 6: Matrix Inverses</title>
 <link>http://jtdaugherty.github.io/posts/linear-algebra-6.html</link>
 <pubDate>Sat, 16 Nov 2013 00:00:00 UTC</pubDate>
 <guid>http://jtdaugherty.github.io/posts/linear-algebra-6.html</guid>
